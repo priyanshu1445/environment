@@ -25,11 +25,11 @@ const ModernFooter = () => {
         <div>
           <h3 className="text-white font-semibold mb-4 border-b border-green-500 inline-block pb-1">Pages</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-green-500 transition">Home</a></li>
-            <li><a href="#" className="hover:text-green-500 transition">Services</a></li>
-            <li><a href="#" className="hover:text-green-500 transition">Gallery</a></li>
-            <li><a href="#" className="hover:text-green-500 transition">About</a></li>
-            <li><a href="#" className="hover:text-green-500 transition">Contact</a></li>
+            <li><a href="/" className="hover:text-green-500 transition">Home</a></li>
+            <li><a href="/about" className="hover:text-green-500 transition">About</a></li>
+            <li><a href="/service" className="hover:text-green-500 transition">Services</a></li>
+            <li><a href="/gallery" className="hover:text-green-500 transition">Gallery</a></li>
+            <li><a href="/contact" className="hover:text-green-500 transition">Contact</a></li>
           </ul>
         </div>
 
