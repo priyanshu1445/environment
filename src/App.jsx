@@ -9,6 +9,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import ServiceDetails from "./pages/ServiceDetails";
+import Projects from "./pages/Project";
+import ProjectDetails from "./pages/ProjectDetails";
 
 const App = () => {
   return (
@@ -22,7 +25,11 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/projects" element={<Projects />} />
+         <Route path="/projects/:id" element={<ProjectDetails/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services/:slug" element={<ServiceDetails />} />
+        
       </Routes>
 
       <ModernFooter />

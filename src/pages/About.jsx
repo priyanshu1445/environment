@@ -1,9 +1,10 @@
 import React from "react";
 import { FaRocket, FaShieldAlt, FaSyncAlt, FaHeadset } from "react-icons/fa";
-import companyImage from "../assets/logo.png"; // Replace with your company image URL
+import companyImage from "../assets/logo.jpeg"; // Replace with your company image URL
 
 import "../index.css"; // Ensure your styles are imported
 import TestimonialSection from "../components/TestimonialSection";
+import RecruitersSection from "../components/RecruitersSection";
 
 const features = [
   { icon: <FaRocket />, title: "Fast Performance", description: "Efficient solutions that save time and resources for your projects.", gradient: "from-green-500 to-green-700" },
@@ -73,6 +74,29 @@ const About = () => {
         </p>
       </section>
 
+       {/* Values with Floating Shapes */}
+      <section className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
+        {/* Floating shapes */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1"></div>
+        <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2"></div>
+        <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3"></div>
+
+        <h2 className="text-3xl font-bold mb-12 text-center relative z-10 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
+          Our Values
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center relative z-10">
+          {values.map((value, idx) => (
+            <div
+              key={idx}
+              className={`p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 border-t-4 border-gradient-to-r ${value.gradient} bg-white`}
+            >
+              <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+              <p className="text-gray-600 text-sm">{value.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
 
          {/* Team / CEO Section */}
@@ -102,28 +126,10 @@ const About = () => {
       </section>
 
 
-       {/* Values with Floating Shapes */}
-      <section className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
-        {/* Floating shapes */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1"></div>
-        <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2"></div>
-        <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3"></div>
+      <RecruitersSection/>
 
-        <h2 className="text-3xl font-bold mb-12 text-center relative z-10 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
-          Our Values
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center relative z-10">
-          {values.map((value, idx) => (
-            <div
-              key={idx}
-              className={`p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 border-t-4 border-gradient-to-r ${value.gradient} bg-white`}
-            >
-              <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-              <p className="text-gray-600 text-sm">{value.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
+      
 
       {/* Features / Services */}
       <section className="bg-gray-100 py-20">

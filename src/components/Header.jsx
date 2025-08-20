@@ -9,7 +9,7 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -63,16 +63,16 @@ const Header = () => {
       {/* Main Navbar */}
       <nav className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-4 ">
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="flex text-xl underline font-bold text-green-500 items-center">
               <Link to="/">
                 <img
                   src={logo}
                   alt="Logo"
-                  className="h-8 w-auto object-contain cursor-pointer"
-                />
-              </Link>
+                  className="h-15 w-auto object-contain cursor-pointer"
+                />   
+              </Link>SKILLED ENVIRO SERVICES
             </div>
 
             {/* Desktop Menu */}
@@ -80,6 +80,7 @@ const Header = () => {
               <Link to="/" className="hover:text-green-600">Home</Link>
               <Link to="/about" className="hover:text-green-600">About</Link>
               <Link to="/services" className="hover:text-green-600">Service</Link>
+              <Link to="/projects" className="hover:text-green-600">Projects</Link>
               <Link to="/gallery" className="hover:text-green-600">Gallery</Link>
               <Link to="/contact" className="hover:text-green-600">Contact</Link>
             </div>
@@ -96,7 +97,7 @@ const Header = () => {
           {/* Mobile Menu */}
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+              isOpen ? "max-h-65 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <ul className="flex flex-col gap-4 py-4 text-gray-700 font-medium">
@@ -113,6 +114,12 @@ const Header = () => {
               <li>
                 <Link to="/services" onClick={() => setIsOpen(false)} className="hover:text-green-600">
                   Services
+                </Link>
+              </li>
+
+               <li>
+                <Link to="/projects" onClick={() => setIsOpen(false)} className="hover:text-green-600">
+                  Projects
                 </Link>
               </li>
               <li>

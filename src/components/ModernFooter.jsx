@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import logo from "../assets/logo.png"; // Replace with your logo path
+import logo from "../assets/logo.jpeg"; // Replace with your logo path
 
 const ModernFooter = () => {
   return (
@@ -28,6 +28,7 @@ const ModernFooter = () => {
             <li><a href="/" className="hover:text-green-500 transition">Home</a></li>
             <li><a href="/about" className="hover:text-green-500 transition">About</a></li>
             <li><a href="/service" className="hover:text-green-500 transition">Services</a></li>
+            <li><a href="/projects" className="hover:text-green-500 transition">Projects</a></li>
             <li><a href="/gallery" className="hover:text-green-500 transition">Gallery</a></li>
             <li><a href="/contact" className="hover:text-green-500 transition">Contact</a></li>
           </ul>

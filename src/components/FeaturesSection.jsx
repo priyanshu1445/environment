@@ -1,3 +1,4 @@
+// FeaturesSection.js
 import React from "react";
 import {
   FaMountain,
@@ -10,8 +11,12 @@ import {
   FaBuilding
 } from "react-icons/fa";
 import { FaFlaskVial } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
-const services = [
+// Generate URL-friendly slugs
+const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
+
+export const services = [
   {
     icon: <FaMountain className="text-3xl text-white" />,
     title: "Mining Projects",
@@ -76,7 +81,8 @@ const FeaturesSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
-            <div
+            <Link
+              to={`/services/${slugify(service.title)}`}
               key={index}
               className="group relative bg-white/70 backdrop-blur-xl border border-gray-100 shadow-lg rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:border-green-200"
             >
@@ -99,7 +105,7 @@ const FeaturesSection = () => {
 
               {/* Hover effect glow */}
               <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-400/30 transition-all duration-500"></div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
