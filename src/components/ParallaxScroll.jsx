@@ -4,27 +4,30 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
+// Import local images
+import natureImg from '../assets/h1.jpg';
+import forestImg from '../assets/h2.jpg';
+import solarImg from '../assets/h3.jpg';
+
 // Slide data: each slide has an image, title, and description
 const slides = [
   {
-    image: 'https://source.unsplash.com/1600x900/?nature,green',
-    title: 'Green Innovation',
-    description: 'Driving change through eco-friendly technology.'
+    image: natureImg,
+    title: 'Innovating for a Greener Future',
+    description:
+      'Empowering communities with sustainable technology that heals our planet and inspires generations to come.'
   },
   {
-    image: 'https://source.unsplash.com/1600x900/?forest',
-    title: 'Forest Conservation',
-    description: 'Protecting natural habitats for future generations.'
+    image: forestImg,
+    title: 'Guardians of the Earth',
+    description:
+      'Preserving forests, protecting biodiversity, and creating a balance where nature and humanity thrive together.'
   },
   {
-    image: 'https://source.unsplash.com/1600x900/?solar,energy',
-    title: 'Solar Power',
-    description: 'Harnessing clean energy from the sun.'
-  },
-  {
-    image: 'https://source.unsplash.com/1600x900/?wind,turbine',
-    title: 'Wind Energy',
-    description: 'Sustainable solutions for a cleaner tomorrow.'
+    image: solarImg,
+    title: 'Energy From the Sun',
+    description:
+      'Transforming sunlight into endless clean power — building a brighter tomorrow without harming today.'
   }
 ];
 
@@ -51,15 +54,15 @@ const ParallaxScroll = () => {
               }}
             >
               <div className="text-white max-w-3xl">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-2xl text-gray-200 mb-6">
+                <p className="text-lg md:text-2xl text-gray-200 mb-6 leading-relaxed">
                   {slide.description}
                 </p>
                 <a
                   href="/about"
-                  className="inline-block px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition duration-300"
+                  className="inline-block px-8 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-lg shadow-xl transition duration-300 transform hover:scale-105"
                 >
                   Discover More
                 </a>

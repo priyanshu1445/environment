@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import AboutImg from "../assets/a1.jpg";
 
 const WhoWeAre = () => {
   const countersRef = useRef(null);
@@ -70,9 +71,9 @@ const WhoWeAre = () => {
           <div className="relative group">
             <div className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20">
               <img
-                src="https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+                src={AboutImg}
                 alt="Skilled Enviro Experts"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
+                className="w-full h-[400px] object-cover object-bottom transform group-hover:scale-105 transition duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-green-800/50 to-transparent"></div>
             </div>

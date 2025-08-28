@@ -1,26 +1,31 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import contactBg from "../assets/contact.jpg"; // Local background image
 
 const Contact = () => {
   return (
     <div className="relative bg-gray-50 overflow-hidden">
 
       {/* Hero / Intro Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text animate-slide-in">
-            Get in Touch
-          </h1>
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto animate-fade-in">
-            Have a question or want to discuss your project? Reach out to our expert team and we’ll get back to you promptly.
-          </p>
-        </div>
+     <section
+      className="relative bg-cover h-[80vh] flex justify-center items-center bg-fixed bg-center text-white py-32"
+       style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${contactBg})`,
+      }}
+    >
+      {/* Overlay for better readability */}
+      {/* <div className="absolute inset-0 bg-opacity-50"></div> */}
 
-        {/* Floating Shapes */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1 "></div>
-        <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2 "></div>
-        <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3 "></div>
-      </section>
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          Get in Touch
+        </h1>
+        <p className="text-lg md:text-xl text-gray-200">
+          Have a question or want to discuss your project? Reach out to our expert team and we’ll get back to you promptly.
+        </p>
+      </div>
+    </section>
 
       {/* Contact Section */}
       <section className="max-w-7xl mx-auto px-6 py-20 relative">
@@ -154,3 +159,4 @@ const Contact = () => {
 };
 
 export default Contact;
+    

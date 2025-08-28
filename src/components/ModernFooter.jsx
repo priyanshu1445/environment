@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import logo from "../assets/logo.jpeg"; // Replace with your logo path
+import logo from "../assets/envirologo.png"; // Replace with your logo path
 
 const ModernFooter = () => {
   return (
@@ -8,7 +8,7 @@ const ModernFooter = () => {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & About */}
         <div>
-          <img src={logo} alt="Skilled Enviro Services" className="w-24 mb-4" />
+          <img src={logo} alt="Skilled Enviro Services" className="w-full mb-4" />
           <p className="text-gray-400 text-sm">
             SKILLED ENVIRO SERVICES, an ISO 9001:2015 certified firm, provides specialized services in Environmental and Engineering solutions, Consulting services in Environment, Mining, construction and Industrial sector.
           </p>
@@ -28,7 +28,7 @@ const ModernFooter = () => {
             <li><a href="/" className="hover:text-green-500 transition">Home</a></li>
             <li><a href="/about" className="hover:text-green-500 transition">About</a></li>
             <li><a href="/service" className="hover:text-green-500 transition">Services</a></li>
-            <li><a href="/projects" className="hover:text-green-500 transition">Projects</a></li>
+            {/* <li><a href="/projects" className="hover:text-green-500 transition">Projects</a></li> */}
             <li><a href="/gallery" className="hover:text-green-500 transition">Gallery</a></li>
             <li><a href="/contact" className="hover:text-green-500 transition">Contact</a></li>
           </ul>

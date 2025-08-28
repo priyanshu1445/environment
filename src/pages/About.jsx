@@ -1,6 +1,11 @@
 import React from "react";
 import { FaRocket, FaShieldAlt, FaSyncAlt, FaHeadset } from "react-icons/fa";
-import companyImage from "../assets/logo.jpeg"; // Replace with your company image URL
+import companyImage from "../assets/envirologo.png"; // Replace with your company image URL
+// import ourStoryBg from "../assets/9495446.png"; // Replace with your background image URL
+
+import bgImage from "../assets/9495446.png"; // Replace with your background image URL
+
+import aboutBg from "../assets/abce.jpg"; // Replace with your background image URL
 
 import "../index.css"; // Ensure your styles are imported
 import TestimonialSection from "../components/TestimonialSection";
@@ -37,101 +42,90 @@ const About = () => {
     <div className="bg-gray-50">
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-10 relative z-10">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
-              About Skilled Enviro Services
-            </h1>
-            <p className="text-gray-300 text-lg mb-6">
-              We provide specialized Environmental and Engineering services with ISO 9001:2015 certification. Our expertise spans consulting, industrial solutions, and construction services.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transform transition hover:scale-105 hover:bg-green-500"
-            >
-              Contact Us
-            </a>
-          </div>
-          <div className="md:w-1/2 relative">
-            <img
-              src={companyImage}
-              alt="Skilled Enviro Services"
-              className="rounded-xl"
-            />
-          </div>
-        </div>
-      </section>
+<section
+  style={{ backgroundImage: `url(${aboutBg})` }}
+  className="relative bg-cover  bg-fixed bg-center bg-no-repeat text-white overflow-hidden h-[100vh] flex items-center justify-center"
+>
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80"></div>
 
-      {/* Company Story */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">Our Story</h2>
-        <p className="text-gray-700 text-lg mb-6 text-center max-w-3xl mx-auto">
-          Skilled Enviro Services was founded with the mission to provide sustainable, innovative, and reliable environmental and engineering solutions. We have successfully delivered projects across multiple industries including mining, construction, and industrial sectors, always maintaining the highest standards of quality.
-        </p>
-        <p className="text-gray-700 text-lg text-center max-w-3xl mx-auto">
-          Our dedicated team of experts ensures that every project is completed efficiently, safely, and responsibly, helping clients achieve their environmental compliance and engineering goals.
-        </p>
-      </section>
+  <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-green-400 via-green-500 to-green-700 text-transparent bg-clip-text drop-shadow-lg">
+      Welcome to Skilled Enviro Services
+    </h1>
 
-       {/* Values with Floating Shapes */}
-      <section className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
-        {/* Floating shapes */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1"></div>
-        <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2"></div>
-        <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3"></div>
+    <p className="text-gray-200 text-lg md:text-xl mb-8 leading-relaxed">
+      Accredited by <span className="font-semibold text-green-300">QCI/NABET Category-A, Govt. of India</span> 
+      and <span className="font-semibold">ISO 9001:2015 certified</span>, we are committed to delivering 
+      sustainable Environmental and Engineering solutions. Since 2020, our team of experts has been 
+      providing trusted consulting and industrial services across mining, construction, and environmental sectors.
+    </p>
 
-        <h2 className="text-3xl font-bold mb-12 text-center relative z-10 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
-          Our Values
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center relative z-10">
-          {values.map((value, idx) => (
-            <div
-              key={idx}
-              className={`p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 border-t-4 border-gradient-to-r ${value.gradient} bg-white`}
-            >
-              <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+   
+  </div>
+</section>
+
+
+
+{/* Company Story */}
+<section className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
+  {/* Floating shapes */}
+  <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1"></div>
+  <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2"></div>
+  <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3"></div>
+
+  <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Left side - Company Story */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
+        Our Story
+      </h2>
+      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+        <span className="font-semibold text-green-600">SKILLED ENVIRO SERVICES</span>, 
+        Accredited by <span className="font-medium">QCI/NABET Category-A, Govt. of India</span> 
+        and <span className="font-medium">ISO 9001:2015 certified</span>, was established in 2020 
+        by experienced environmental and engineering experts. We provide specialized consulting, 
+        industrial, and construction solutions while working towards our motto of 
+        <span className="italic text-green-600"> Sustainable Environment</span>.
+      </p>
+      <p className="text-gray-700 text-lg leading-relaxed">
+        Quality Assurance and customer satisfaction are at the heart of our philosophy. 
+        Our team of highly qualified experts from diverse fields — Environmental Sciences, 
+        Chemistry, Botany, Zoology, Engineering, and Geology — ensures excellence and innovation 
+        in every project we deliver.
+      </p>
+    </div>
+
+    {/* Right side - Values Cards */}
+    <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {values.concat([
+          {
+            title: "Excellence",
+            desc: "Delivering the highest quality solutions with innovation and integrity.",
+            gradient: "from-yellow-400 to-orange-500"
+          }
+        ]).map((value, idx) => (
+          <div
+            key={idx}
+            className={`group relative p-6 rounded-2xl shadow-xl bg-white border-t-4 border-green-500 ${value.gradient} transition-transform transform hover:-translate-y-2 hover:shadow-2xl`}
+          >
+            {/* Animated Gradient Border Effect */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-100 to-green-500 opacity-0 group-hover:opacity-50 transition duration-500 "></div>
+            
+            {/* Card Content */}
+            <div className="relative">
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">{value.title}</h3>
               <p className="text-gray-600 text-sm">{value.desc}</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-
-
-         {/* Team / CEO Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">Meet Our Team</h2>
-
-        {/* CEO */}
-        <div className="flex flex-col md:flex-row items-center justify-center mb-16 gap-6">
-          <img src={ceo.image} alt={ceo.name} className="w-48 h-48 rounded-full object-cover shadow-xl" />
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold">{ceo.name}</h3>
-            <p className="text-gray-600 text-lg mt-2">{ceo.role}</p>
-            <p className="text-gray-700 mt-4 max-w-md">{ceo.description}</p>
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
-        {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          {teamMembers.map((member, idx) => (
-            <div key={idx} className="p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 bg-white">
-              <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto object-cover mb-4 shadow-lg" />
-              <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-gray-600 text-sm">{member.role}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      <RecruitersSection/>
-
-
-      
-
-      {/* Features / Services */}
+    {/* Features / Services */}
       <section className="bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
@@ -153,6 +147,60 @@ const About = () => {
           </div>
         </div>
       </section>
+
+
+
+         {/* Team / CEO Section */}
+   <section
+      className=" mx-auto px-6 py-20 bg-cover bg-center bg-no-repeat rounded-2xl"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
+        Meet Our Team
+      </h2>
+
+      {/* CEO */}
+      <div className="flex flex-col md:flex-row items-center justify-center mb-16 gap-6">
+        <img
+          src={ceo.image}
+          alt={ceo.name}
+          className="w-48 h-48 rounded-full object-cover shadow-xl"
+        />
+        <div className="text-center md:text-left bg-white/70 p-4 rounded-xl shadow-md">
+          <h3 className="text-2xl font-bold">{ceo.name}</h3>
+          <p className="text-gray-600 text-lg mt-2">{ceo.role}</p>
+          <p className="text-gray-700 mt-4 max-w-md">{ceo.description}</p>
+        </div>
+      </div>
+
+      {/* Team Members */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        {teamMembers.map((member, idx) => (
+          <div
+            key={idx}
+            className="p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 bg-white/80 backdrop-blur-sm"
+          >
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-32 h-32 rounded-full mx-auto object-cover mb-4 shadow-lg"
+            />
+            <h3 className="text-xl font-semibold">{member.name}</h3>
+            <p className="text-gray-600 text-sm">{member.role}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+
+   
+
+      <RecruitersSection/>
+
+
+      
+
+     
 
      
 <TestimonialSection/>

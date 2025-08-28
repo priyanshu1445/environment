@@ -1,43 +1,33 @@
 import React from "react";
 
+// Import logos
+import jsw from "../assets/l1.png";
+import adaniLogo from "../assets/l2.jpg";
+import jswLogo from "../assets/l4.jpg";
+import vedantaLogo from "../assets/l5.png";
+import hindalcoLogo from "../assets/l6.png";
+import nmdcLogo from "../assets/l7.png";
+import ltLogo from "../assets/l8.jpeg";
+import jindalLogo from "../assets/l3.svg";
+import "../index.css";
+
 const recruiters = [
-  {
-    name: "Tata Steel",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Tata_Steel_Logo.svg/2560px-Tata_Steel_Logo.svg.png",
-  },
-  {
-    name: "Adani Group",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Adani_2012_logo.svg/2560px-Adani_2012_logo.svg.png",
-  },
-  {
-    name: "JSW",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/JSW_Group_logo.svg/2560px-JSW_Group_logo.svg.png",
-  },
-  {
-    name: "Vedanta",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Vedanta_Limited_logo.svg/2560px-Vedanta_Limited_logo.svg.png",
-  },
-  {
-    name: "Hindalco",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Hindalco_Industries_Logo.svg/2560px-Hindalco_Industries_Logo.svg.png",
-  },
-  {
-    name: "NMDC",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/NMDC_Limited_Logo.svg/2560px-NMDC_Limited_Logo.svg.png",
-  },
-  {
-    name: "L&T",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/L%26T_Logo.svg/2560px-L%26T_Logo.svg.png",
-  },
-  {
-    name: "Jindal Steel",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Jindal_Steel_and_Power_logo.svg/2560px-Jindal_Steel_and_Power_logo.svg.png",
-  },
+  { logo: jsw },
+  { logo: adaniLogo },
+  { logo: jswLogo },
+  { logo: vedantaLogo },
+  { logo: hindalcoLogo },
+  { logo: nmdcLogo },
+  { logo: ltLogo },
+  { logo: jindalLogo },
 ];
 
 const RecruitersSection = () => {
+  // duplicate array for infinite effect
+  const logos = [...recruiters, ...recruiters];
+
   return (
-    <section className="bg-gradient-to-r from-green-700 via-green-800 to-green-700 py-20 px-6">
+    <section className="bg-gradient-to-r from-green-700 via-green-800 to-green-700 py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
           Our{" "}
@@ -50,26 +40,42 @@ const RecruitersSection = () => {
           engineering, and industrial consultancy.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
-          {recruiters.map((recruiter, idx) => (
-            <div
-              key={idx}
-              className="group bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 transition-transform transform hover:scale-[1.05] hover:shadow-2xl hover:border-green-300 border border-green-100"
-            >
-              <img
-                src={recruiter.logo}
-                alt={recruiter.name}
-                className="h-16 mx-auto object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 group-hover:drop-shadow-lg"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/150?text=Logo+Missing";
-                }}
-              />
-              <p className="mt-4 text-sm text-green-900 font-medium">
-                {recruiter.name}
-              </p>
-            </div>
-          ))}
+        {/* First Row - Left Scroll */}
+        <div className="relative w-full overflow-hidden mb-10">
+          <div className="animate-marquee space-x-12 flex">
+            {logos.map((recruiter, idx) => (
+              <div
+                key={`row1-${idx}`}
+                className="flex-shrink-0 w-48 h-32 flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
+              >
+                <img
+                  src={recruiter.logo}
+                  alt={`recruiter-${idx}`}
+                  className="max-h-20 object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Second Row - Right Scroll */}
+        <div className="relative w-full overflow-hidden">
+          <div className="animate-marquee-reverse space-x-12 flex">
+            {logos.map((recruiter, idx) => (
+              <div
+                key={`row2-${idx}`}
+                className="flex-shrink-0 w-48 h-32 flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
+              >
+                <img
+                  src={recruiter.logo}
+                  alt={`recruiter-${idx}`}
+                  className="max-h-20 object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

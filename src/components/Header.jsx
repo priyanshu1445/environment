@@ -61,26 +61,36 @@ const Header = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center py-4 ">
+      <nav className="bg-white shadow-md py-3">
+        <div className="max-w-8xl mx-auto px-4">
+          <div className="flex justify-between items-center  ">
             {/* Logo */}
-            <div className="flex text-xl underline font-bold text-green-500 items-center">
-              <Link to="/">
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="h-15 w-auto object-contain cursor-pointer"
-                />   
-              </Link>SKILLED ENVIRO SERVICES
-            </div>
+            <div className="flex items-center gap-4 font-bold">
+  <Link to="/" className="flex items-center">
+    <img
+      src={logo}
+      alt="Logo"
+      className="md:h-16 h-10 w-auto object-contain cursor-pointer"
+    />
+
+    <div className="flex flex-col">
+      <h1 className="md:text-3xl text-md text-green-500">
+       <span className="md:text-4xl">S</span>KILLED <span className="md:text-4xl">E</span>NVIRO <span className="md:text-4xl">S</span>ERVICES
+      </h1>
+      <p className=" text-[10px] italic md:pl-7 font-medium text-teal-900">
+        Your comprehensive environmental solutions partner
+      </p>
+    </div>
+  </Link>
+</div>
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8 text-lg text-gray-700 font-medium">
               <Link to="/" className="hover:text-green-600">Home</Link>
               <Link to="/about" className="hover:text-green-600">About</Link>
               <Link to="/services" className="hover:text-green-600">Service</Link>
-              <Link to="/projects" className="hover:text-green-600">Projects</Link>
+              
               <Link to="/gallery" className="hover:text-green-600">Gallery</Link>
               <Link to="/contact" className="hover:text-green-600">Contact</Link>
             </div>
@@ -117,11 +127,7 @@ const Header = () => {
                 </Link>
               </li>
 
-               <li>
-                <Link to="/projects" onClick={() => setIsOpen(false)} className="hover:text-green-600">
-                  Projects
-                </Link>
-              </li>
+              
               <li>
                 <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-green-600">
              Gallery

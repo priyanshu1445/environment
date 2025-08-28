@@ -1,118 +1,198 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { FaCamera, FaVideo } from "react-icons/fa";
+import galleryBg from "../assets/gallery.jpg"; // Local background image
 
 const galleryItems = [
-  { type: "image", title: "Mining Project Site", src: "https://placehold.co/400x300" },
-  { type: "video", title: "Irrigation Project Overview", src: "https://placehold.co/400x300" },
-  { type: "image", title: "Cement Plant Facility", src: "https://placehold.co/400x300" },
-  { type: "image", title: "Highway Construction", src: "https://placehold.co/400x300" },
-  { type: "video", title: "Industrial Plant Process", src: "https://placehold.co/400x300" },
-  { type: "image", title: "Environmental Monitoring", src: "https://placehold.co/400x300" },
+  {
+    type: "image",
+    title: "Renewable Energy Project",
+    src: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80", // wind turbines renewable
+  },
+  {
+    type: "video",
+    title: "Forest Reforestation Initiative",
+    src: "https://videos.pexels.com/video-files/8571955/8571955-uhd_2560_1440_25fps.mp4", // drone forest replanting
+  },
+  {
+    type: "image",
+    title: "Water Conservation Facility",
+    src: "https://images.unsplash.com/photo-1508182311256-e3f7d1cfa3a0?auto=format&fit=crop&w=1200&q=80", // water dam/reservoir
+  },
+  {
+    type: "image",
+    title: "Sustainable Urban Farming",
+    src: "https://images.unsplash.com/photo-1589927986089-35812388d1a0?auto=format&fit=crop&w=1200&q=80", // greenhouse farming
+  },
+  {
+    type: "video",
+    title: "Solar Panel Installation",
+    src: "https://videos.pexels.com/video-files/8556040/8556040-uhd_2560_1440_25fps.mp4", // solar project
+  },
+  {
+    type: "image",
+    title: "Wildlife Habitat Restoration",
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80", // natural habitat
+  },
 ];
 
+
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState(null);
+  const mediaRef = useRef(null);
+
+  // ✅ Open and request fullscreen in one gesture
+  const handleOpen = useCallback((item) => {
+    setSelectedMedia(item);
+    document.documentElement.classList.add("overflow-hidden");
+    setTimeout(() => {
+      if (mediaRef.current) {
+        if (mediaRef.current.requestFullscreen) mediaRef.current.requestFullscreen();
+        else if (mediaRef.current.webkitRequestFullscreen) mediaRef.current.webkitRequestFullscreen();
+        else if (mediaRef.current.msRequestFullscreen) mediaRef.current.msRequestFullscreen();
+      }
+    }, 100);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setSelectedMedia(null);
+    document.documentElement.classList.remove("overflow-hidden");
+    if (document.fullscreenElement) document.exitFullscreen();
+    if (document.webkitFullscreenElement) document.webkitExitFullscreen();
+    if (document.msFullscreenElement) document.msExitFullscreen();
+  }, []);
+
+  // ✅ Auto-close overlay when exiting fullscreen
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      if (!document.fullscreenElement &&
+          !document.webkitFullscreenElement &&
+          !document.msFullscreenElement) {
+        setSelectedMedia(null);
+        document.documentElement.classList.remove("overflow-hidden");
+      }
+    };
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", onFullscreenChange);
+    document.addEventListener("MSFullscreenChange", onFullscreenChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", onFullscreenChange);
+      document.removeEventListener("webkitfullscreenchange", onFullscreenChange);
+      document.removeEventListener("MSFullscreenChange", onFullscreenChange);
+    };
+  }, []);
+
+  // ✅ ESC fallback
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape" && selectedMedia) handleClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedMedia, handleClose]);
 
   return (
     <div className="bg-gray-50 overflow-hidden relative">
-
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text animate-slide-in">
-            Our Gallery
-          </h1>
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto animate-fade-in">
-            Explore our projects, infrastructure, and environmental initiatives through our premium gallery. Each visual tells the story of our expertise and dedication.
-          </p>
-        </div>
+         <section
+      className="relative h-[80vh] bg-fixed justify-center items-center flex text-white py-32 bg-center bg-cover"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(${galleryBg})`,
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
+          Our Gallery
+        </h1>
+        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
+          Explore our projects, infrastructure, and environmental initiatives through our premium gallery. 
+          Each visual tells the story of our expertise and dedication.
+        </p>
+      </div>
+    </section>
 
-        {/* Hero Floating Shapes */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full animate-float1 "></div>
-        <div className="absolute top-20 right-10 w-48 h-48 bg-blue-300 opacity-20 rounded-full animate-float2 "></div>
-        <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-300 opacity-20 rounded-full animate-float3 "></div>
-      </section>
 
-      {/* Gallery Grid Section */}
-      <section className=" mx-auto px-6 py-20 relative overflow-hidden">
-        {/* Background floating shapes */}
-        <div className="absolute top-0 left-0 w-48 h-48 bg-green-500 opacity-20 rounded-full animate-float1 "></div>
-        <div className="absolute top-0 right-0 w-48 h-48 bg-yellow-500 opacity-20 rounded-full animate-float2 "></div>
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-blue-500 opacity-20 rounded-full animate-float3 "></div>
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-purple-400 opacity-20 rounded-full animate-float1 "></div>
+      {/* Gallery Grid */}
+  <section className="mx-auto px-6 py-20 relative overflow-hidden">
+  {/* Floating Shapes Background */}
+ <div className="absolute top-10 left-10 w-40 h-40 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full  opacity-30 animate-float1"></div>
+<div className="absolute top-40 right-20 w-56 h-56 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-full  opacity-30 animate-float2"></div>
+<div className="absolute bottom-20 left-1/4 w-48 h-48 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full  opacity-30 animate-float3"></div>
+<div className="absolute bottom-10 left-1/2 w-48 h-48 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full  opacity-30 animate-float3"></div>
+<div className="absolute bottom-32 right-1/3 w-32 h-32 bg-gradient-to-tr from-yellow-300 to-orange-400 rounded-full  opacity-30 animate-float1"></div>
+<div className="absolute top-1/3 left-1/2 w-52 h-52 bg-gradient-to-r from-teal-300 to-green-500 rounded-full  opacity-30 animate-float2"></div>
 
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text animate-slide-in">
-          Project Gallery
-        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 relative z-10">
-          {galleryItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white transition-transform transform hover:scale-105 hover:-translate-y-2 hover:shadow-4xl"
-            >
-              {/* Floating shapes behind each card */}
-              <div className="absolute -top-6 -left-6 w-20 h-20 bg-green-300 opacity-30 rounded-full animate-float1 blur-xl group-hover:scale-110 transition-transform duration-700"></div>
-              <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-blue-400 opacity-20 rounded-full animate-float2 blur-xl group-hover:scale-110 transition-transform duration-700"></div>
-              <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-purple-400 opacity-25 rounded-full animate-float3 blur-xl group-hover:scale-110 transition-transform duration-700"></div>
+  {/* Section Heading */}
+  <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text relative z-10">
+    Project Gallery
+  </h2>
 
-              {/* Gradient hover glow */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-green-400 via-blue-400 to-purple-500 opacity-0 group-hover:opacity-40 transition duration-500 rounded-3xl blur-3xl"></div>
-
-              <img
-                src={item.src}
-                alt={item.title}
-                className="w-full h-60 object-cover rounded-3xl cursor-pointer relative z-10 transition-transform duration-500 group-hover:scale-110"
-                onClick={() => setSelectedImage(item.src)}
-              />
-
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center z-20">
-                <div className="text-white text-4xl mb-2 scale-90 group-hover:scale-100 transition-transform duration-500">
-                  {item.type === "image" ? <FaCamera /> : <FaVideo />}
-                </div>
-                <h3 className="text-white text-lg font-semibold opacity-90 group-hover:opacity-100 transition-opacity duration-500">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
-          <div className="relative">
-            <img src={selectedImage} alt="Preview" className="max-h-[80vh] rounded-2xl shadow-2xl" />
-            <button
-              className="absolute top-2 right-2 text-white text-3xl hover:text-gray-300"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
+  {/* Gallery Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 relative z-10">
+    {galleryItems.map((item, idx) => (
+      <div
+        key={idx}
+        className="relative group rounded-3xl overflow-hidden shadow-2xl bg-white transition-transform transform hover:scale-105 hover:-translate-y-2"
+      >
+        {item.type === "image" ? (
+          <img
+            src={item.src}
+            alt={item.title}
+            className="w-full h-60 object-cover rounded-3xl cursor-pointer transition-transform duration-500 group-hover:scale-110"
+            onClick={() => handleOpen(item)}
+          />
+        ) : (
+          <video
+            src={item.src}
+            className="w-full h-60 object-cover rounded-3xl cursor-pointer transition-transform duration-500 group-hover:scale-110"
+            onClick={() => handleOpen(item)}
+            loop
+            muted
+          />
+        )}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center z-20">
+          <div className="text-white text-4xl mb-2 scale-90 group-hover:scale-100 transition-transform duration-500">
+            {item.type === "image" ? <FaCamera /> : <FaVideo />}
           </div>
+          <h3 className="text-white text-lg font-semibold">{item.title}</h3>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* Fullscreen Overlay */}
+      {selectedMedia && (
+        <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+          <button
+            aria-label="Close"
+            className="absolute top-4 right-5 text-white text-4xl font-bold hover:text-gray-400 z-[10000]"
+            onClick={handleClose}
+          >
+            ×
+          </button>
+          {selectedMedia.type === "image" ? (
+            <img
+              ref={mediaRef}
+              src={selectedMedia.src}
+              alt={selectedMedia.title}
+              className="max-w-full max-h-full object-contain"
+            />
+          ) : (
+            <video
+              ref={mediaRef}
+              src={selectedMedia.src}
+              className="max-w-full max-h-full object-contain"
+              controls
+              autoPlay
+            />
+          )}
         </div>
       )}
-
-      {/* CTA Section */}
-      <section className="text-center py-20 bg-gradient-to-r from-green-600 to-green-800">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-slide-in">
-          Want to See More?
-        </h2>
-        <p className="text-white mb-8 max-w-2xl mx-auto animate-fade-in">
-          Contact us to learn more about our ongoing projects and get exclusive insights into our work.
-        </p>
-               <a
-  href="tel:+917737986988"
-  className="inline-block bg-gradient-to-r from-green-100 to-green-300 text-green-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:from-green-50 hover:to-green-200 transition"
->
- Contact Us
-</a>
-      </section>
     </div>
   );
 };
 
 export default Gallery;
-    
