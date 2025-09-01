@@ -50,7 +50,7 @@ const ParallaxScroll = () => {
             <div
               className="w-full h-full bg-center bg-cover flex items-center justify-center text-center px-4"
               style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(${slide.image})`
+                backgroundImage: `url(${slide.image})`
               }}
             >
               <div className="text-white max-w-3xl">

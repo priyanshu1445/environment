@@ -66,7 +66,7 @@ const WhoWeAre = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-16 relative z-10">
         {/* Row 1: Image + Short Intro */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
           {/* Left: Image */}
           <div className="relative group">
             <div className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20">
@@ -102,7 +102,7 @@ const WhoWeAre = () => {
         </div>
 
         {/* Row 2: Long Description */}
-        <div className="space-y-4 text-gray-100 max-w-5xl text-lg leading-relaxed">
+        <div className="space-y-4 text-gray-100 max-w-5xl text-lg text-justify ">
           <p>
             <strong>Skilled Enviro Services</strong>, accredited by QCI/NABET
             (Category-A), Govt. of India, and ISO 9001:2015 certified, was

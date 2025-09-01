@@ -10,7 +10,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import logo from "../assets/logo.jpeg";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="fixed w-full z-50 top-0">
       {/* Top Bar */}
-      <div className="bg-green-600 text-white text-sm"> {/* ✅ Changed to green */}
+      <div className="bg-green-600 text-white text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center sm:gap-6">
@@ -63,36 +63,81 @@ const Header = () => {
       {/* Main Navbar */}
       <nav className="bg-white shadow-md py-3">
         <div className="max-w-8xl mx-auto px-4">
-          <div className="flex justify-between items-center  ">
+          <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center gap-4 font-bold">
-  <Link to="/" className="flex items-center">
-    <img
-      src={logo}
-      alt="Logo"
-      className="md:h-16 h-10 w-auto object-contain cursor-pointer"
-    />
+              <NavLink to="/" className="flex items-center">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="md:h-16 h-10 w-auto object-contain cursor-pointer"
+                />
 
-    <div className="flex flex-col">
-      <h1 className="md:text-3xl text-md text-green-500">
-       <span className="md:text-4xl">S</span>KILLED <span className="md:text-4xl">E</span>NVIRO <span className="md:text-4xl">S</span>ERVICES
-      </h1>
-      <p className=" text-[10px] italic md:pl-7 font-medium text-teal-900">
-        Your comprehensive environmental solutions partner
-      </p>
-    </div>
-  </Link>
-</div>
-
+                <div className="flex flex-col">
+                  <h1 className="md:text-3xl text-md text-green-500">
+                    <span className="md:text-4xl">S</span>KILLED{" "}
+                    <span className="md:text-4xl">E</span>NVIRO{" "}
+                    <span className="md:text-4xl">S</span>ERVICES
+                  </h1>
+                  <p className=" text-[10px] italic md:pl-7 font-medium text-teal-900">
+                    Your comprehensive environmental solutions partner
+                  </p>
+                </div>
+              </NavLink>
+            </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8 text-lg text-gray-700 font-medium">
-              <Link to="/" className="hover:text-green-600">Home</Link>
-              <Link to="/about" className="hover:text-green-600">About</Link>
-              <Link to="/services" className="hover:text-green-600">Service</Link>
-              
-              <Link to="/gallery" className="hover:text-green-600">Gallery</Link>
-              <Link to="/contact" className="hover:text-green-600">Contact</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-600 font-bold border-b-2 border-green-600"
+                    : "hover:text-green-600"
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-600 font-bold border-b-2 border-green-600"
+                    : "hover:text-green-600"
+                }
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-600 font-bold border-b-2 border-green-600"
+                    : "hover:text-green-600"
+                }
+              >
+                Service
+              </NavLink>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-600 font-bold border-b-2 border-green-600"
+                    : "hover:text-green-600"
+                }
+              >
+                Gallery
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-600 font-bold border-b-2 border-green-600"
+                    : "hover:text-green-600"
+                }
+              >
+                Contact
+              </NavLink>
             </div>
 
             {/* Mobile Menu Button */}
@@ -112,35 +157,60 @@ const Header = () => {
           >
             <ul className="flex flex-col gap-4 py-4 text-gray-700 font-medium">
               <li>
-                <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-green-600">
+                <NavLink
+                  to="/"
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? "text-green-600 font-bold" : "hover:text-green-600"
+                  }
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-green-600">
+                <NavLink
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? "text-green-600 font-bold" : "hover:text-green-600"
+                  }
+                >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/services" onClick={() => setIsOpen(false)} className="hover:text-green-600">
+                <NavLink
+                  to="/services"
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? "text-green-600 font-bold" : "hover:text-green-600"
+                  }
+                >
                   Services
-                </Link>
+                </NavLink>
               </li>
-
-              
               <li>
-                <Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-green-600">
-             Gallery
-                </Link>
+                <NavLink
+                  to="/gallery"
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? "text-green-600 font-bold" : "hover:text-green-600"
+                  }
+                >
+                  Gallery
+                </NavLink>
               </li>
-
-
-               <li>
-                <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-green-600">
+              <li>
+                <NavLink
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? "text-green-600 font-bold" : "hover:text-green-600"
+                  }
+                >
                   Contact
-                </Link>
+                </NavLink>
               </li>
-          
             </ul>
           </div>
         </div>
