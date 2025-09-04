@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import AboutImg from "../assets/a1.jpg";
+import AboutImg from "../assets/12312.jpg";
 
 const WhoWeAre = () => {
   const countersRef = useRef(null);
@@ -73,7 +73,7 @@ const WhoWeAre = () => {
               <img
                 src={AboutImg}
                 alt="Skilled Enviro Experts"
-                className="w-full h-[400px] object-cover object-bottom transform group-hover:scale-105 transition duration-700 ease-out"
+                className="w-full h-[400px] object-cover object-right transform group-hover:scale-105 transition duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-green-800/50 to-transparent"></div>
             </div>
@@ -92,7 +92,7 @@ const WhoWeAre = () => {
             {/* Certifications */}
             <div className="flex flex-wrap gap-3">
               <span className="inline-block bg-white/20 text-white font-semibold px-4 py-1 rounded-full backdrop-blur-sm shadow border border-white/30">
-                QCI/NABET Category-A
+                QCI/NABET (Category-A )
               </span>
               <span className="inline-block bg-white/20 text-white font-semibold px-4 py-1 rounded-full backdrop-blur-sm shadow border border-white/30">
                 ISO 9001:2015

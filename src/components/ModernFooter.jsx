@@ -5,7 +5,7 @@ import logo from "../assets/envirologo.png"; // Replace with your logo path
 const ModernFooter = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Logo & About */}
         <div>
           <img src={logo} alt="Skilled Enviro Services" className="w-full mb-4" />
@@ -14,10 +14,10 @@ const ModernFooter = () => {
           </p>
           {/* Social icons */}
           <div className="flex mt-4 space-x-4">
-            <a href="#" className="hover:text-green-500 transition"><FaFacebookF /></a>
-            <a href="#" className="hover:text-green-500 transition"><FaInstagram /></a>
-            <a href="#" className="hover:text-green-500 transition"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-green-500 transition"><FaTwitter /></a>
+            <a href="https://www.facebook.com/people/Skilled-Enviro-Services/100068131592409/" className="hover:text-green-500 transition"><FaFacebookF /></a>
+          
+            <a href="https://www.linkedin.com/in/sameer-singh-729294a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " className="hover:text-green-500 transition"><FaLinkedinIn /></a>
+
           </div>
         </div>
 
@@ -38,30 +38,22 @@ const ModernFooter = () => {
         <div>
           <h3 className="text-white font-semibold mb-4 border-b border-green-500 inline-block pb-1">Contact</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>+91 7737986988</li>
-            <li>info@skillenviroservices.com</li>
+            <li>
+  <a href="tel:+917737986988" className="hover:text-blue-500">
+    +91 7737986988
+  </a>
+</li>
+<li>
+  <a href="mailto:skilledenviro@gmail.com " className="hover:text-blue-500">
+     skilledenviro@gmail.com 
+  </a>
+</li>
+
             <li>B-126, Model Town, Jagatpura Road, Jaipur-302017, Rajasthan, India</li>
           </ul>
         </div>
 
-        {/* Newsletter */}
-        <div>
-          <h3 className="text-white font-semibold mb-4 border-b border-green-500 inline-block pb-1">Newsletter</h3>
-          <p className="text-gray-400 text-sm mb-4">Subscribe to get the latest updates</p>
-          <form className="flex shadow-lg rounded-full overflow-hidden border border-gray-700">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full px-5 py-3 focus:outline-none text-white placeholder-gray-500"
-            />
-            <button
-              type="submit"
-              className="bg-green-600 px-6 py-3 hover:bg-green-500 transition text-white font-semibold"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+      
       </div>
 
       {/* Bottom bar */}

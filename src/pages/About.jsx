@@ -4,6 +4,8 @@ import companyImage from "../assets/envirologo.png"; // Replace with your compan
 // import ourStoryBg from "../assets/9495446.png"; // Replace with your background image URL
 
 import bgImage from "../assets/9495446.png"; // Replace with your background image URL
+import CEO from "../assets/ceo.jpeg"; // Replace with your CEO image URL
+
 
 import aboutBg from "../assets/abce.jpg"; // Replace with your background image URL
 
@@ -31,9 +33,9 @@ const teamMembers = [
 ];
 
 const ceo = {
-  name: "Mr. John CEO",
+  name: "Sameer Singh",
   role: "Chief Executive Officer",
-  image: "https://yourdomain.com/assets/ceo.jpg",
+  image: CEO,
   description: "Leading the company with vision and expertise, ensuring our mission of providing top-notch environmental and engineering solutions is achieved."
 };
 

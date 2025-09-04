@@ -1,70 +1,15 @@
 // FeaturesSection.js
 import React from "react";
-import {
-  FaMountain,
-  FaWater,
-  FaIndustry,
-  FaFlask,
-  FaCogs,
-  FaWarehouse,
-  FaRoad,
-  FaBuilding
-} from "react-icons/fa";
-import { FaFlaskVial } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { allServices } from "../components/ServicesData"; // ✅ Import your data
 
-// Generate URL-friendly slugs
-const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
-
-export const services = [
-  {
-    icon: <FaMountain />,
-    title: "Mining Projects",
-    description: "Comprehensive environmental and engineering solutions for mining operations."
-  },
-  {
-    icon: <FaWater />,
-    title: "Irrigation Projects",
-    description: "Sustainable water management and irrigation system planning."
-  },
-  {
-    icon: <FaFlask />,
-    title: "Mineral Beneficiation",
-    description: "Optimized processes for mineral separation and value enhancement."
-  },
-  {
-    icon: <FaIndustry />,
-    title: "Metallurgical Industries",
-    description: "Tailored environmental solutions for metallurgical manufacturing."
-  },
-  {
-    icon: <FaCogs />,
-    title: "Cement Plants",
-    description: "Eco-friendly process optimization for cement production."
-  },
-  {
-    icon: <FaWarehouse />,
-    title: "SYNTHETIC ORGANIC INDUSTRIES",
-    description: "Safe and compliant asbestos plant environmental services."
-  },
-  {
-    icon: <FaFlaskVial />,
-    title: "Synthetic Organic Industries",
-    description: "Sustainable solutions for chemical and synthetic industries."
-  },
-  {
-    icon: <FaRoad />,
-    title: "Highway Projects",
-    description: "Environmentally conscious planning for highway developments."
-  },
-  {
-    icon: <FaBuilding />,
-    title: "Construction Projects",
-    description: "Comprehensive environmental compliance for construction sites."
-  }
-];
+// ✅ Slugify function
+const slugify = (text) => text.toLowerCase().replace(/\s+/g, "-");
 
 const FeaturesSection = () => {
+  // ✅ Filter only Main/Core Services (first 11)
+  const mainServices = allServices.slice(0, 11);
+
   return (
     <section className="py-24 px-6 bg-white relative overflow-hidden">
       {/* Ambient gradient background */}
@@ -92,9 +37,9 @@ const FeaturesSection = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {services.map((service, index) => (
+          {mainServices.map((service, index) => (
             <Link
-              to={`/services/${slugify(service.title)}`}
+              to={`/services/${(service.urlTitle)}`} // ✅ slug instead of ID
               key={index}
               className="group relative block p-8 rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
             >

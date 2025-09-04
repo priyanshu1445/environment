@@ -1,154 +1,75 @@
 // ServicesData.js
 import {
+  FaLeaf,
+  FaTree,
+  FaIndustry,
+  FaTint,
+  FaUsers,
+  FaCheckCircle,
+  FaClipboardCheck,
+  FaProjectDiagram,
+  FaPaperPlane,
+  FaMapMarkedAlt,
+  FaExclamationTriangle,
   FaMountain,
   FaWater,
-  FaIndustry,
-  FaRoad,
   FaCogs,
   FaBuilding,
   FaFlask,
+  FaRoad,
   FaHardHat,
 } from "react-icons/fa";
 
 // 📌 Import local images
-import miningImg from "../assets/12.jpg";
-import irrigationImg from "../assets/8.jpg";
-import mineralImg from "../assets/11.jpg";
-import metallurgicalImg from "../assets/10.jpg";
-import cementImg from "../assets/1.jpg";
-import organicImg from "../assets/14.jpg";
-import highwayImg from "../assets/7.jpg";
-import constructionImg from "../assets/3.jpg";
-import socialImg from "../assets/15.jpg";
 import environmentImg from "../assets/6.jpg";
 import forestImg from "../assets/6.jpg";
 import consentImg from "../assets/10.jpg";
+import monitoringImg from "../assets/11.jpg";
+import socialImg from "../assets/15.jpg";
+import cgwaImg from "../assets/8.jpg";
+import complianceImg from "../assets/9.jpg";
 import miningPlanImg from "../assets/13.jpg";
 import dgpsImg from "../assets/2.jpg";
 import replenishImg from "../assets/14.jpg";
-import legalImg from "../assets/9.jpg";
+import riskImg from "../assets/12.jpg";
 
+// 🔧 Robust slug generator (slashes, ampersands, multiple hyphens handled)
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[\/&]+/g, " ")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/^-|-$/g, "");
+
+// ✅ Single source of truth (Core + Additional) with categories
 export const allServices = [
+  // -------- Core Services --------
   {
-    title: "MINING PROJECTS",
-    icon: <FaMountain size={28} />,
-    image: miningImg,
-    description:
-      "Comprehensive mining project solutions with sustainable and eco-friendly practices.",
-    features: [
-      "Sustainable and eco-friendly operations",
-      "Advanced mining technologies",
-      "Expert project management team",
-    ],
-  },
-  {
-    title: "IRRIGATION PROJECTS",
-    icon: <FaWater size={28} />,
-    image: irrigationImg,
-    description:
-      "Design and development of modern irrigation systems for agriculture and urban needs.",
-    features: [
-      "Efficient water management",
-      "Customized irrigation solutions",
-      "Support for agriculture and urban growth",
-    ],
-  },
-  {
-    title: "MINERAL BENEFICIATION",
-    icon: <FaIndustry size={28} />,
-    image: mineralImg,
-    description:
-      "Processing and value-addition of minerals with advanced technologies.",
-    features: [
-      "High-efficiency mineral recovery",
-      "Cutting-edge processing plants",
-      "Environment-friendly beneficiation methods",
-    ],
-  },
-  {
-    title: "METALLURGICAL INDUSTRIES",
-    icon: <FaCogs size={28} />,
-    image: metallurgicalImg,
-    description:
-      "Innovative metallurgical solutions for industrial applications.",
-    features: [
-      "Expert metallurgical consulting",
-      "Industrial-scale solutions",
-      "Reliable and sustainable practices",
-    ],
-  },
-  {
-    title: "CEMENT PLANTS",
-    icon: <FaBuilding size={28} />,
-    image: cementImg,
-    description: "Efficient and sustainable cement manufacturing plant projects.",
-    features: [
-      "Energy-efficient plant designs",
-      "Sustainable raw material sourcing",
-      "Turnkey project delivery",
-    ],
-  },
-  {
-    title: "SYNTHETIC ORGANIC INDUSTRIES",
-    icon: <FaFlask size={28} />,
-    image: organicImg,
-    description: "Cutting-edge chemical and organic industry solutions.",
-    features: [
-      "Advanced lab testing",
-      "Custom chemical solutions",
-      "Regulatory compliance expertise",
-    ],
-  },
-  {
-    title: "HIGHWAY PROJECTS",
-    icon: <FaRoad size={28} />,
-    image: highwayImg,
-    description:
-      "Design and construction of modern highways ensuring safety and sustainability.",
-    features: [
-      "Durable and safe construction",
-      "Modern design techniques",
-      "Long-term maintenance support",
-    ],
-  },
-  {
-    title: "CONSTRUCTION PROJECTS",
-    icon: <FaHardHat size={28} />,
-    image: constructionImg,
-    description: "End-to-end construction services from planning to execution.",
-    features: [
-      "Full project lifecycle support",
-      "Experienced construction teams",
-      "Compliance with global standards",
-    ],
-  },
-  {
-    title: "SOCIAL IMPACT ASSESSMENT STUDY",
-    image: socialImg,
-    description:
-      "Comprehensive evaluation of social impact for projects.",
-    features: [
-      "Community engagement",
-      "Impact measurement studies",
-      "Sustainable development focus",
-    ],
-  },
-  {
-    title: "ENVIRONMENTAL MONITORING",
+    category: "core",
+    title: "ENVIRONMENT IMPACT ASSESSMENT AND MANAGEMENT PLANS",
+    urlTitle: "environment-impact-assessment-and-management-plans",
+    slug: slugify("ENVIRONMENT IMPACT ASSESSMENT AND MANAGEMENT PLANS"),
+    icon: <FaLeaf size={28} />,
     image: environmentImg,
     description:
-      "Regular monitoring to ensure sustainable environmental practices.",
+      "Detailed analysis and management strategies to minimize environmental impacts of proposed projects.",
     features: [
-      "Air and water quality analysis",
-      "Advanced monitoring equipment",
-      "Comprehensive reporting",
+      "Comprehensive EIA reports",
+      "Sustainable management plans",
+      "Regulatory compliance ensured",
     ],
   },
   {
+    category: "core",
     title: "FOREST CLEARANCE",
+    urlTitle: "forest-clearance",
+    slug: slugify("FOREST CLEARANCE"),
+    icon: <FaTree size={28} />,
     image: forestImg,
     description:
-      "Guidance and approval assistance for forest clearance requirements.",
+      "Assistance in obtaining statutory forest clearance approvals for development projects.",
     features: [
       "End-to-end clearance process",
       "Regulatory approval support",
@@ -156,10 +77,14 @@ export const allServices = [
     ],
   },
   {
-    title: "CONSENT TO ESTABLISH/OPERATE",
+    category: "core",
+    title: "CONSENT TO ESTABLISH OPERATE",
+    urlTitle: "consent-to-establish-operate",
+    slug: slugify("CONSENT TO ESTABLISH OPERATE"),
+    icon: <FaIndustry size={28} />,
     image: consentImg,
     description:
-      "Support in obtaining regulatory approvals for operations.",
+      "Guidance and documentation for CTE and CTO approvals to set up and operate industries.",
     features: [
       "Documentation support",
       "Faster approval processes",
@@ -167,10 +92,74 @@ export const allServices = [
     ],
   },
   {
+    category: "core",
+    title: "ENVIRONMENTAL MONITORING",
+    urlTitle: "environmental-monitoring",
+    slug: slugify("ENVIRONMENTAL MONITORING"),
+    icon: <FaTint size={28} />,
+    image: monitoringImg,
+    description:
+      "Regular monitoring of air, water, noise, and soil quality to ensure compliance with environmental norms.",
+    features: [
+      "Air, water, and soil quality analysis",
+      "Advanced monitoring equipment",
+      "Comprehensive reporting",
+    ],
+  },
+  {
+    category: "core",
+    title: "SOCIAL IMPACT ASSESSMENT STUDY",
+    urlTitle: "social-impact-assessment-study",
+    slug: slugify("SOCIAL IMPACT ASSESSMENT STUDY"),
+    icon: <FaUsers size={28} />,
+    image: socialImg,
+    description:
+      "Evaluating and addressing the social impacts of development projects on communities.",
+    features: [
+      "Community engagement",
+      "Impact measurement studies",
+      "Sustainable development focus",
+    ],
+  },
+  {
+    category: "core",
+    title: "CGWA CLEARANCE",
+    urlTitle: "cgwa-clearance",
+    slug: slugify("CGWA CLEARANCE"),
+    icon: <FaCheckCircle size={28} />,
+    image: cgwaImg,
+    description:
+      "Clearance and compliance services related to groundwater usage as per CGWA guidelines.",
+    features: [
+      "Groundwater usage assessment",
+      "Clearance application support",
+      "Regulatory compliance",
+    ],
+  },
+  {
+    category: "core",
+    title: "HALF YEARLY COMPLIANCE TO EC / CTE & CTO CONDITIONS",
+    urlTitle: "half-yearly-compliance-to-ec-cte-cto-conditions",
+    slug: slugify("HALF YEARLY COMPLIANCE TO EC / CTE & CTO CONDITIONS"),
+    icon: <FaClipboardCheck size={28} />,
+    image: complianceImg,
+    description:
+      "Preparation and submission of compliance reports for Environmental Clearance, CTE, and CTO.",
+    features: [
+      "Need based Corporate Environment Responsibility",
+      "CER Compliance Record",
+      "Detailed compliance documentation",
+    ],
+  },
+  {
+    category: "core",
     title: "MINING PLAN",
+    urlTitle: "mining-plan",
+    slug: slugify("MINING PLAN"),
+    icon: <FaProjectDiagram size={28} />,
     image: miningPlanImg,
     description:
-      "Preparation of detailed mining plans adhering to legal standards.",
+      "Preparation of mining plans in compliance with statutory requirements.",
     features: [
       "Comprehensive mining plans",
       "Legal compliance ensured",
@@ -178,10 +167,14 @@ export const allServices = [
     ],
   },
   {
-    title: "DGPS SURVEY",
+    category: "core",
+    title: "DRONE / DGPS SURVEY",
+    urlTitle: "drone-dgps-survey",
+    slug: slugify("DRONE / DGPS SURVEY"),
+    icon: <FaPaperPlane size={28} />,
     image: dgpsImg,
     description:
-      "High-precision surveys using DGPS technology.",
+      "High-precision surveys for land mapping and monitoring using drone/DGPS technology.",
     features: [
       "Accurate field measurements",
       "Latest survey equipment",
@@ -189,10 +182,14 @@ export const allServices = [
     ],
   },
   {
+    category: "core",
     title: "REPLENISHMENT STUDY",
+    urlTitle: "replenishment-study",
+    slug: slugify("REPLENISHMENT STUDY"),
+    icon: <FaMapMarkedAlt size={28} />,
     image: replenishImg,
     description:
-      "Analysis and planning for resource replenishment.",
+      "Scientific assessment of natural resource replenishment for sustainable project planning.",
     features: [
       "Detailed resource analysis",
       "Data-driven insights",
@@ -200,14 +197,140 @@ export const allServices = [
     ],
   },
   {
-    title: "LEGAL COMPLIANCE",
-    image: legalImg,
+    category: "core",
+    title: "RISK ASSESSMENT",
+    urlTitle: "risk-assessment",
+    slug: slugify("RISK ASSESSMENT"),
+    icon: <FaExclamationTriangle size={28} />,
+    image: riskImg,
     description:
-      "Ensuring all activities meet legal and regulatory requirements.",
+      "Systematic identification and evaluation of potential hazards with mitigation measures.",
     features: [
-      "Up-to-date compliance checks",
-      "Risk mitigation strategies",
-      "Regulatory advisory services",
+      "Hazard identification",
+      "Impact evaluation",
+      "Mitigation strategies",
+    ],
+  },
+
+  // -------- Additional Services --------
+  {
+    category: "additional",
+    title: "MINING PROJECTS",
+    urlTitle: "mining-projects",
+    slug: slugify("MINING PROJECTS"),
+    icon: <FaMountain size={28} />,
+    image: miningPlanImg,
+    description:
+      "Comprehensive solutions for mining infrastructure and operations.",
+    features: [
+      "Infrastructure planning",
+      "End-to-end project execution",
+      "Regulatory clearance support",
+    ],
+  },
+  {
+    category: "additional",
+    title: "IRRIGATION PROJECTS",
+    urlTitle: "irrigation-projects",
+    slug: slugify("IRRIGATION PROJECTS"),
+    icon: <FaWater size={28} />,
+    image: monitoringImg,
+    description: "Design and development of efficient irrigation systems.",
+    features: [
+      "Smart irrigation design",
+      "Water conservation focus",
+      "Sustainable solutions",
+    ],
+  },
+  {
+    category: "additional",
+    title: "MINERAL BENEFICIATION",
+    urlTitle: "mineral-beneficiation",
+    slug: slugify("MINERAL BENEFICIATION"),
+    icon: <FaIndustry size={28} />,
+    image: consentImg,
+    description:
+      "Processes to improve the economic value of extracted minerals.",
+    features: [
+      "Process optimization",
+      "Value enhancement",
+      "Industry-compliant methods",
+    ],
+  },
+  {
+    category: "additional",
+    title: "METALLURGICAL INDUSTRIES",
+    urlTitle: "metallurgical-industries",
+    slug: slugify("METALLURGICAL INDUSTRIES"),
+    icon: <FaCogs size={28} />,
+    image: complianceImg,
+    description: "Engineering support for metallurgical and process industries.",
+    features: [
+      "Industry-specific solutions",
+      "Compliance-focused design",
+      "Operational efficiency",
+    ],
+  },
+  {
+    category: "additional",
+    title: "CEMENT PLANTS",
+    urlTitle: "cement-plants",
+    slug: slugify("CEMENT PLANTS"),
+    icon: <FaBuilding size={28} />,
+    image: environmentImg,
+    description: "Turnkey solutions for cement plant setup and expansion.",
+    features: [
+      "Complete project setup",
+      "Expansion support",
+      "Regulatory assistance",
+    ],
+  },
+  {
+    category: "additional",
+    title: "SYNTHETIC ORGANIC INDUSTRIES",
+    urlTitle: "synthetic-organic-industries",
+    slug: slugify("SYNTHETIC ORGANIC INDUSTRIES"),
+    icon: <FaFlask size={28} />,
+    image: socialImg,
+    description: "Consultancy and solutions for chemical and organic industries.",
+    features: [
+      "Process design",
+      "Sustainability compliance",
+      "Safety-focused solutions",
+    ],
+  },
+  {
+    category: "additional",
+    title: "HIGHWAY PROJECTS",
+    urlTitle: "highway-projects",
+    slug: slugify("HIGHWAY PROJECTS"),
+    icon: <FaRoad size={28} />,
+    image: forestImg,
+    description: "Development of modern highways and expressways.",
+    features: [
+      "Highway planning",
+      "Execution and monitoring",
+      "Eco-friendly design",
+    ],
+  },
+  {
+    category: "additional",
+    title: "CONSTRUCTION PROJECTS",
+    urlTitle: "construction-projects",
+    slug: slugify("CONSTRUCTION PROJECTS"),
+    icon: <FaHardHat size={28} />,
+    image: dgpsImg,
+    description: "End-to-end solutions for large-scale construction works.",
+    features: [
+      "Project design",
+      "Execution with safety focus",
+      "Compliance assurance",
     ],
   },
 ];
+
+// 🔁 Useful helpers (optional)
+export const coreServices = allServices.filter((s) => s.category === "core");
+export const additionalServices = allServices.filter(
+  (s) => s.category === "additional"
+);

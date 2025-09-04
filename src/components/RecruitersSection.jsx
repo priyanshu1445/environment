@@ -1,25 +1,49 @@
 import React from "react";
-
-// Import logos
-import jsw from "../assets/l1.png";
-import adaniLogo from "../assets/l2.jpg";
-import jswLogo from "../assets/l4.jpg";
-import vedantaLogo from "../assets/l5.png";
-import hindalcoLogo from "../assets/l6.png";
-import nmdcLogo from "../assets/l7.png";
-import ltLogo from "../assets/l8.jpeg";
-import jindalLogo from "../assets/l3.svg";
 import "../index.css";
 
+// Import logos (1 to 20)
+import l1 from "../assets/l1.png";
+import l2 from "../assets/l2.jpg";
+import l3 from "../assets/l3.svg";
+import l4 from "../assets/l4.jpg";
+import l5 from "../assets/l5.png";
+import l6 from "../assets/l6.png";
+import l7 from "../assets/l7.png";
+import l8 from "../assets/l8.jpeg";
+import l9 from "../assets/l9.jpg";
+import l10 from "../assets/l10.jpg";
+import l11 from "../assets/l11.jpg";
+import l12 from "../assets/l12.jpg";
+import l13 from "../assets/l13.jpg";
+import l14 from "../assets/l14.jpg";
+import l15 from "../assets/l15.jpg";
+import l16 from "../assets/l16.jpg";
+import l17 from "../assets/l17.jpg";
+import l18 from "../assets/l18.jpg";
+import l19 from "../assets/l19.jpg";
+import l20 from "../assets/l20.jpg";
+
 const recruiters = [
-  { logo: jsw },
-  { logo: adaniLogo },
-  { logo: jswLogo },
-  { logo: vedantaLogo },
-  { logo: hindalcoLogo },
-  { logo: nmdcLogo },
-  { logo: ltLogo },
-  { logo: jindalLogo },
+  { logo: l1 },
+  { logo: l2 },
+  { logo: l3 },
+  { logo: l4 },
+  { logo: l5 },
+  { logo: l6 },
+  { logo: l7 },
+  { logo: l8 },
+  { logo: l9 },
+  { logo: l10 },
+  { logo: l11 },
+  { logo: l12 },
+  { logo: l13 },
+  { logo: l14 },
+  { logo: l15 },
+  { logo: l16 },
+  { logo: l17 },
+  { logo: l18 },
+  { logo: l19 },
+  { logo: l20 },
 ];
 
 const RecruitersSection = () => {
