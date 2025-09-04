@@ -6,32 +6,32 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Aarav Sharma",
     feedback:
       "This service exceeded my expectations! The team was very professional and responsive.",
   },
   {
-    name: "Sarah Lee",
+    name: "Priya Verma",
     feedback:
       "Absolutely wonderful experience, everything was handled smoothly and efficiently.",
   },
   {
-    name: "Michael Brown",
+    name: "Rohan Mehta",
     feedback:
       "Highly recommended! Quality work and excellent customer support.",
   },
   {
-    name: "Emily Davis",
+    name: "Ananya Iyer",
     feedback:
       "The results were beyond what I expected. I’m truly impressed with their expertise.",
   },
   {
-    name: "David Clark",
+    name: "Vikram Singh",
     feedback:
       "Prompt, reliable, and top-quality service. Couldn’t ask for more.",
   },
   {
-    name: "Sophia Wilson",
+    name: "Sneha Kapoor",
     feedback:
       "I love how transparent and efficient the process was from start to finish.",
   },
@@ -83,4 +83,3 @@ const TestimonialSection = () => {
 };
 
 export default TestimonialSection;
-    

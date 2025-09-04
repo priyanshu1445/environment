@@ -69,7 +69,8 @@ export const allServices = [
     icon: <FaTree size={28} />,
     image: forestImg,
     description:
-      "Assistance in obtaining statutory forest clearance approvals for development projects.",
+   "Our professional forest management expertise helps you in meeting the regulatory requirements of the projects involving diversion of forest land, conforming to the guidelines issued by the Ministry of Environment, Forest and Climate Change (MoEF & CC) under Forest (Conservation) Act, 1980."
+,
     features: [
       "End-to-end clearance process",
       "Regulatory approval support",
@@ -84,7 +85,7 @@ export const allServices = [
     icon: <FaIndustry size={28} />,
     image: consentImg,
     description:
-      "Guidance and documentation for CTE and CTO approvals to set up and operate industries.",
+      "Skilled Enviro Services provides consultancy service for obtaining Consent to Establish/Operate (CTE/CTO) for various private and public companies from state pollution control boards. Our professionals have clear understanding of the requirements for obtaining CTE/CTO and the process.",
     features: [
       "Documentation support",
       "Faster approval processes",
@@ -99,7 +100,7 @@ export const allServices = [
     icon: <FaTint size={28} />,
     image: monitoringImg,
     description:
-      "Regular monitoring of air, water, noise, and soil quality to ensure compliance with environmental norms.",
+     "Skilled Enviro Services aims to provide an effective, realistic and robust social & environment management plan for the project which manifolds the social and environmental feasibility of the project",
     features: [
       "Air, water, and soil quality analysis",
       "Advanced monitoring equipment",
@@ -114,7 +115,7 @@ export const allServices = [
     icon: <FaUsers size={28} />,
     image: socialImg,
     description:
-      "Evaluating and addressing the social impacts of development projects on communities.",
+   "Skilled Enviro Services aims to provide an effective, realistic and robust social & environment management plan for the project which manifolds the social and environmental feasibility of the project",
     features: [
       "Community engagement",
       "Impact measurement studies",
@@ -129,7 +130,7 @@ export const allServices = [
     icon: <FaCheckCircle size={28} />,
     image: cgwaImg,
     description:
-      "Clearance and compliance services related to groundwater usage as per CGWA guidelines.",
+      "Skilled Enviro Services provides consultancy service for obtaining CGWA clearances. Our professional expertise helps you in meeting the regulatory requirements of the projects.",
     features: [
       "Groundwater usage assessment",
       "Clearance application support",
@@ -146,9 +147,10 @@ export const allServices = [
     description:
       "Preparation and submission of compliance reports for Environmental Clearance, CTE, and CTO.",
     features: [
+      "As per the EIA notification, 2006 a mandatory requirement for the project holders is to submit half- yearly compliance reports in respect of the stipulated prior environmental clearance terms and conditions to the regulatory authority. Skilled Enviro Services helps you in meeting the regulatory requirements of the projects Act, 1980.",
       "Need based Corporate Environment Responsibility",
-      "CER Compliance Record",
-      "Detailed compliance documentation",
+      "CER COMPLIANCE RECORD:",
+      "LEGAL COMPLIANCE",
     ],
   },
   {
@@ -161,9 +163,7 @@ export const allServices = [
     description:
       "Preparation of mining plans in compliance with statutory requirements.",
     features: [
-      "Comprehensive mining plans",
-      "Legal compliance ensured",
-      "Tailored for client requirements",
+     "Under Mineral Conservation & Development Rules, the lessees have to prepare and submit the mining plans, Skilled Enviro Services have qualified persons who have vast experience of preparing scientific and systematic mining plans in accordance with the regulatory requirements.",
     ],
   },
   {
@@ -176,9 +176,7 @@ export const allServices = [
     description:
       "High-precision surveys for land mapping and monitoring using drone/DGPS technology.",
     features: [
-      "Accurate field measurements",
-      "Latest survey equipment",
-      "GIS integration support",
+      "Differential Global Positioning System (DGPS) is an enhancement to Global Positioning System that provides improved location accuracy, Skilled Enviro Services is a leading service provider of DGPS Survey and all type of land survey",
     ],
   },
   {
@@ -191,9 +189,7 @@ export const allServices = [
     description:
       "Scientific assessment of natural resource replenishment for sustainable project planning.",
     features: [
-      "Detailed resource analysis",
-      "Data-driven insights",
-      "Future sustainability planning",
+     "The Union Ministry of Environment has issued the Enforcement and Monitoring Guidelines for Sand Mining 2020 (the “2020 Guidelines”), which unequivocally recognize the importance of a replenishment study. Skilled Enviro Services have Experts who have vast experience of preparing scientific replenishment study in accordance with the regulatory requirements.",
     ],
   },
   {
@@ -206,9 +202,9 @@ export const allServices = [
     description:
       "Systematic identification and evaluation of potential hazards with mitigation measures.",
     features: [
-      "Hazard identification",
-      "Impact evaluation",
-      "Mitigation strategies",
+      "oHazop Studies - We conduct HAZOP study for systematic examination of planned, existing process & operations which may lead risks to personnel, equipment or operation.",
+      "oHazop Studies - We conduct HAZOP study for systematic examination of planned, existing process & operations which may lead risks to personnel, equipment or operation.",
+      "oHAZID Study - HAZID study and trainings which focuses on facility hazards",
     ],
   },
 

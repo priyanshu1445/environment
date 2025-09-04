@@ -4,7 +4,7 @@ import "../index.css";
 // Import logos (1 to 20)
 import l1 from "../assets/l1.png";
 import l2 from "../assets/l2.jpg";
-import l3 from "../assets/l3.svg";
+import l3 from "../assets/l3.jpg";
 import l4 from "../assets/l4.jpg";
 import l5 from "../assets/l5.png";
 import l6 from "../assets/l6.png";
@@ -22,6 +22,9 @@ import l17 from "../assets/l17.jpg";
 import l18 from "../assets/l18.jpg";
 import l19 from "../assets/l19.jpg";
 import l20 from "../assets/l20.jpg";
+import l21 from "../assets/l21.jpg";
+import l22 from "../assets/l22.jpg";
+import l23 from "../assets/l23.jpg";
 
 const recruiters = [
   { logo: l1 },
@@ -44,6 +47,9 @@ const recruiters = [
   { logo: l18 },
   { logo: l19 },
   { logo: l20 },
+  { logo: l21 },
+  { logo: l22 },
+  { logo: l23 },
 ];
 
 const RecruitersSection = () => {
@@ -70,12 +76,12 @@ const RecruitersSection = () => {
             {logos.map((recruiter, idx) => (
               <div
                 key={`row1-${idx}`}
-                className="flex-shrink-0 w-48 h-32 flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
+                className="flex-shrink-0 w-48 h-auto flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
               >
                 <img
                   src={recruiter.logo}
                   alt={`recruiter-${idx}`}
-                  className="max-h-20 object-contain"
+                  className="h-[150px] object-contain"
                   loading="lazy"
                 />
               </div>
@@ -89,12 +95,12 @@ const RecruitersSection = () => {
             {logos.map((recruiter, idx) => (
               <div
                 key={`row2-${idx}`}
-                className="flex-shrink-0 w-48 h-32 flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
+                className="flex-shrink-0 w-48 h-auto flex items-center justify-center bg-white rounded-xl shadow-xl p-6 hover:scale-110 transition-transform"
               >
                 <img
                   src={recruiter.logo}
                   alt={`recruiter-${idx}`}
-                  className="max-h-20 object-contain"
+                  className="h-[150px] object-contain"
                   loading="lazy"
                 />
               </div>

@@ -49,7 +49,7 @@ const ModernFooter = () => {
   </a>
 </li>
 
-            <li>B-126, Model Town, Jagatpura Road, Jaipur-302017, Rajasthan, India</li>
+            <li>- C15, Laxmi Mansion, Prem Villa, Patrakar Colony, Mansarovar, Jaipur Rajasthan 302020</li>
           </ul>
         </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroBg from "../assets/jkl.jpg";
+import heroBg from "../assets/abcede.jpg";
 import FeaturesSection from "../components/FeaturesSection";
 import { additionalServices } from "../components/ServicesData"; // ✅ import
 
@@ -12,7 +12,7 @@ const Services = () => {
     <div className="bg-gray-50 overflow-hidden">
       {/* Hero */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center text-white h-screen"
+        className="relative bg-cover bg-top bg-no-repeat flex  items-center justify-center text-white h-screen"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="text-center z-10 px-6">
@@ -26,7 +26,7 @@ const Services = () => {
         </div>
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </section>
 
       {/* Core Services */}

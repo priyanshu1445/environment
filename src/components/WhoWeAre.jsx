@@ -92,7 +92,7 @@ const WhoWeAre = () => {
             {/* Certifications */}
             <div className="flex flex-wrap gap-3">
               <span className="inline-block bg-white/20 text-white font-semibold px-4 py-1 rounded-full backdrop-blur-sm shadow border border-white/30">
-                QCI/NABET (Category-A )
+               Accredited QCI/NABET (Category-A )
               </span>
               <span className="inline-block bg-white/20 text-white font-semibold px-4 py-1 rounded-full backdrop-blur-sm shadow border border-white/30">
                 ISO 9001:2015

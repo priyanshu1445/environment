@@ -7,7 +7,7 @@ import bgImage from "../assets/9495446.png"; // Replace with your background ima
 import CEO from "../assets/ceo.jpeg"; // Replace with your CEO image URL
 
 
-import aboutBg from "../assets/abce.jpg"; // Replace with your background image URL
+import aboutBg from "../assets/about1231.jpg"; // Replace with your background image URL
 
 import "../index.css"; // Ensure your styles are imported
 import TestimonialSection from "../components/TestimonialSection";
@@ -36,7 +36,7 @@ const ceo = {
   name: "Sameer Singh",
   role: "Chief Executive Officer",
   image: CEO,
-  description: "Leading the company with vision and expertise, ensuring our mission of providing top-notch environmental and engineering solutions is achieved."
+  description: "Our clients consistently praise our expertise, professionalism, and reliability. They value our deep knowledge of environmental laws, clear guidance, and ability to simplify complex regulatory processes. With a focus on timely delivery, transparency, and sustainable solutions, we’ve built a reputation as a trusted partner for end-to-end environmental consultancy services."
 };
 
 const About = () => {
@@ -49,7 +49,7 @@ const About = () => {
   className="relative bg-cover  bg-fixed bg-center bg-no-repeat text-white overflow-hidden h-[100vh] flex items-center justify-center"
 >
   {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/50 to-black/40"></div>
 
   <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
     <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-green-400 via-green-500 to-green-700 text-transparent bg-clip-text drop-shadow-lg">
@@ -57,7 +57,7 @@ const About = () => {
     </h1>
 
     <p className="text-gray-200 text-lg md:text-xl mb-8 leading-relaxed">
-      Accredited by <span className="font-semibold text-green-300">QCI/NABET Category-A, Govt. of India</span> 
+      Accredited by <span className="font-semibold text-green-300">QCI/NABET Category-A, Govt. of India </span>  
       and <span className="font-semibold">ISO 9001:2015 certified</span>, we are committed to delivering 
       sustainable Environmental and Engineering solutions. Since 2020, our team of experts has been 
       providing trusted consulting and industrial services across mining, construction, and environmental sectors.
@@ -84,7 +84,7 @@ const About = () => {
       </h2>
       <p className="text-gray-700 text-lg leading-relaxed mb-6">
         <span className="font-semibold text-green-600">SKILLED ENVIRO SERVICES</span>, 
-        Accredited by <span className="font-medium">QCI/NABET Category-A, Govt. of India</span> 
+        Accredited by <span className="font-medium">QCI/NABET Category-A, Govt. of India  </span> 
         and <span className="font-medium">ISO 9001:2015 certified</span>, was established in 2020 
         by experienced environmental and engineering experts. We provide specialized consulting, 
         industrial, and construction solutions while working towards our motto of 

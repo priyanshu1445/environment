@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
   FaPhoneAlt,
   FaEnvelope,
+   FaGoogle ,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
@@ -23,37 +24,55 @@ const Header = () => {
   return (
     <header className="fixed w-full z-50 top-0">
       {/* Top Bar */}
-      <div className="bg-green-600 text-white text-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center sm:gap-6">
-            <a href="tel:+91 7737986988
-" className="flex items-center gap-1 hover:text-gray-200">
-              <FaPhoneAlt /> +91 7737986988
+    <div className="bg-green-600 text-white text-sm">
+  <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
+    {/* Contact Info */}
+    <div className="flex flex-col sm:flex-row items-center sm:gap-6">
+      <a
+        href="tel:+917737986988"
+        className="flex items-center gap-1 hover:text-gray-200"
+      >
+        <FaPhoneAlt /> +91 7737986988
+      </a>
+      <a
+        href="mailto:skilledenviro@gmail.com"
+        className="flex items-center gap-1 hover:text-gray-200"
+      >
+        <FaEnvelope /> skilledenviro@gmail.com
+      </a>
+    </div>
 
-            </a>
-            <a href="mailto:skilledenviro@gmail.com " className="flex items-center gap-1 hover:text-gray-200">
-              <FaEnvelope />skilledenviro@gmail.com 
-            </a>
-          </div>
+    {/* Social Media Icons */}
+    <div className="flex items-center gap-5">
+      <a
+        href="https://www.facebook.com/people/Skilled-Enviro-Services/100068131592409/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-gray-200"
+      >
+        <FaFacebookF size={23} />
+      </a>
 
-          {/* Social Media Icons */}
-          <div className="flex items-center gap-5">
-            <a
-              href="https://www.facebook.com/people/Skilled-Enviro-Services/100068131592409/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-200"
-            >
-              <FaFacebookF size={23} />
-            </a>
-        
-            <a target="blank" href="https://www.linkedin.com/in/sameer-singh-729294a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " className="hover:text-gray-200">
-              <FaLinkedinIn size={23} />
-            </a>
-          </div>
-        </div>
-      </div>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/sameer-singh-729294a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        className="hover:text-gray-200"
+      >
+        <FaLinkedinIn size={23} />
+      </a>
+
+      {/* Google Icon */}
+      <a
+        href="https://www.google.com/search?sca_esv=adca3bde667fa053&hl=en-GB&gl=in&output=search&kgmid=/g/11vjw5fkxy&q=Skilled+Enviro+Services,+Jaipur&shndl=30&shem=lsptbl1&source=sh/x/loc/act/m1/3&kgs=7cbf09793fe9e9f4&utm_source=lsptbl1,sh/x/loc/act/m1/3"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-gray-200"
+      >
+        <FaGoogle size={23} />
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* Main Navbar */}
       <nav className="bg-white shadow-md py-3">
