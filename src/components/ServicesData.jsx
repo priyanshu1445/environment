@@ -21,17 +21,23 @@ import {
 } from "react-icons/fa";
 
 // 📌 Import local images
-import environmentImg from "../assets/6.jpg";
-import forestImg from "../assets/6.jpg";
-import consentImg from "../assets/10.jpg";
-import monitoringImg from "../assets/11.jpg";
-import socialImg from "../assets/15.jpg";
-import cgwaImg from "../assets/8.jpg";
-import complianceImg from "../assets/9.jpg";
-import miningPlanImg from "../assets/13.jpg";
+import environmentImg from "../assets/2525252.png";
+import forestImg from "../assets/212121.jpg";
+import consentImg from "../assets/00000.jpg";
+import monitoringImg from "../assets/00001.jpg";
+import socialImg from "../assets/00002.jpg";
+import cgwaImg from "../assets/00003.jpg";
+import complianceImg from "../assets/00004.jpg";
+import miningPlanImg from "../assets/12.jpg";
 import dgpsImg from "../assets/2.jpg";
-import replenishImg from "../assets/14.jpg";
-import riskImg from "../assets/12.jpg";
+import replenishImg from "../assets/00006.jpg";
+import riskImg from "../assets/00007.webp";
+import cement from "../assets/1.jpg"
+import highway from "../assets/7.jpg"
+import construction from "../assets/3.jpg"
+import mineral from "../assets/11.jpg"
+import metalluragical from "../assets/10.jpg"
+import irrigation from "../assets/8.jpg"
 
 // 🔧 Robust slug generator (slashes, ampersands, multiple hyphens handled)
 const slugify = (text) =>
@@ -54,11 +60,17 @@ export const allServices = [
     icon: <FaLeaf size={28} />,
     image: environmentImg,
     description:
-      "Detailed analysis and management strategies to minimize environmental impacts of proposed projects.",
+      "These are some of the best services we provide to our clients.",
     features: [
-      "Comprehensive EIA reports",
-      "Sustainable management plans",
-      "Regulatory compliance ensured",
+     "MINNING PROJECTS",
+      "IRRIGATION PROJECTS",
+      "MINERAL BENEFICIATION",
+      "METALLURGICAL INDUSTRIES",
+      "CEMENT PLANTS",
+      "SYNTHETIC ORGANIC INDUSTRIES",
+      "HIGHWAY PROJECTS",
+      "CONSTRUCTION PROJECTS",
+      "ASBESTOS PLANTS",
     ],
   },
   {
@@ -230,7 +242,7 @@ export const allServices = [
     urlTitle: "irrigation-projects",
     slug: slugify("IRRIGATION PROJECTS"),
     icon: <FaWater size={28} />,
-    image: monitoringImg,
+    image: irrigation,
     description: "Design and development of efficient irrigation systems.",
     features: [
       "Smart irrigation design",
@@ -244,7 +256,7 @@ export const allServices = [
     urlTitle: "mineral-beneficiation",
     slug: slugify("MINERAL BENEFICIATION"),
     icon: <FaIndustry size={28} />,
-    image: consentImg,
+    image: mineral,
     description:
       "Processes to improve the economic value of extracted minerals.",
     features: [
@@ -259,7 +271,7 @@ export const allServices = [
     urlTitle: "metallurgical-industries",
     slug: slugify("METALLURGICAL INDUSTRIES"),
     icon: <FaCogs size={28} />,
-    image: complianceImg,
+    image: metalluragical,
     description: "Engineering support for metallurgical and process industries.",
     features: [
       "Industry-specific solutions",
@@ -273,7 +285,7 @@ export const allServices = [
     urlTitle: "cement-plants",
     slug: slugify("CEMENT PLANTS"),
     icon: <FaBuilding size={28} />,
-    image: environmentImg,
+    image: cement,
     description: "Turnkey solutions for cement plant setup and expansion.",
     features: [
       "Complete project setup",
@@ -301,7 +313,7 @@ export const allServices = [
     urlTitle: "highway-projects",
     slug: slugify("HIGHWAY PROJECTS"),
     icon: <FaRoad size={28} />,
-    image: forestImg,
+    image: highway,
     description: "Development of modern highways and expressways.",
     features: [
       "Highway planning",
@@ -315,7 +327,7 @@ export const allServices = [
     urlTitle: "construction-projects",
     slug: slugify("CONSTRUCTION PROJECTS"),
     icon: <FaHardHat size={28} />,
-    image: dgpsImg,
+    image: construction,
     description: "End-to-end solutions for large-scale construction works.",
     features: [
       "Project design",

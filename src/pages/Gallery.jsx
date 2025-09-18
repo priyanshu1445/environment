@@ -1,37 +1,43 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { FaCamera, FaVideo } from "react-icons/fa";
 import galleryBg from "../assets/gallery.jpg"; // Local background image
+import g1 from "../assets/g1.jpg";
+import g2 from "../assets/g2.jpg";
+import g3 from "../assets/g3.jpg";
+import g4 from "../assets/g4.jpg";
+import g5 from "../assets/g5.jpg";
+import g6 from "../assets/g6.jpg";
 
 const galleryItems = [
   {
     type: "image",
-    title: "Renewable Energy Project",
-    src: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80", // wind turbines renewable
-  },
-  {
-    type: "video",
-    title: "Forest Reforestation Initiative",
-    src: "https://videos.pexels.com/video-files/8571955/8571955-uhd_2560_1440_25fps.mp4", // drone forest replanting
+ 
+    src: g1, // wind turbines renewable
   },
   {
     type: "image",
-    title: "Water Conservation Facility",
-    src: "https://images.unsplash.com/photo-1508182311256-e3f7d1cfa3a0?auto=format&fit=crop&w=1200&q=80", // water dam/reservoir
+
+    src: g2, // drone forest replanting
   },
   {
     type: "image",
-    title: "Sustainable Urban Farming",
-    src: "https://images.unsplash.com/photo-1589927986089-35812388d1a0?auto=format&fit=crop&w=1200&q=80", // greenhouse farming
-  },
-  {
-    type: "video",
-    title: "Solar Panel Installation",
-    src: "https://videos.pexels.com/video-files/8556040/8556040-uhd_2560_1440_25fps.mp4", // solar project
+ 
+    src: g3, // water dam/reservoir
   },
   {
     type: "image",
-    title: "Wildlife Habitat Restoration",
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80", // natural habitat
+
+    src: g4, // greenhouse farming
+  },
+  {
+    type: "image",
+
+    src: g5, // solar project
+  },
+  {
+    type: "image",
+  
+    src: g6, // natural habitat
   },
 ];
 
@@ -152,9 +158,7 @@ const Gallery = () => {
         )}
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center z-20">
-          <div className="text-white text-4xl mb-2 scale-90 group-hover:scale-100 transition-transform duration-500">
-            {item.type === "image" ? <FaCamera /> : <FaVideo />}
-          </div>
+        
           <h3 className="text-white text-lg font-semibold">{item.title}</h3>
         </div>
       </div>

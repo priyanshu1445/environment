@@ -64,10 +64,10 @@ const ServiceDetails = () => {
       >
         <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 text-black">
           <div>
-            <h2 className="text-3xl font-semibold mb-6">
+            <h2 className="md:text-3xl text-2xl font-semibold mb-6">
               About Our {service.title}
             </h2>
-            <p className="leading-relaxed mb-4">{service.description}</p>
+            <p className="leading-relaxed font-medium text-xl mb-4">{service.description}</p>
             <p className="leading-relaxed mb-4">
               Our {service.title.toLowerCase()} service offers innovative,
               efficient, and compliant solutions tailored to client needs.
@@ -75,7 +75,7 @@ const ServiceDetails = () => {
 
             {/* ✅ Dynamic features list */}
             {service.features && (
-              <ul className="list-disc ml-5 space-y-2">
+              <ul className="list-disc font-medium ml-5 space-y-2">
                 {service.features.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
@@ -84,7 +84,7 @@ const ServiceDetails = () => {
           </div>
 
           {service.image && (
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="rounded-lg overflow-hidden ">
               <img
                 src={service.image}
                 alt={service.title}

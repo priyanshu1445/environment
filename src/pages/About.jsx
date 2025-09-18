@@ -7,7 +7,7 @@ import bgImage from "../assets/9495446.png"; // Replace with your background ima
 import CEO from "../assets/ceo.jpeg"; // Replace with your CEO image URL
 
 
-import aboutBg from "../assets/about1231.jpg"; // Replace with your background image URL
+import aboutBg from "../assets/00008.jpg"; // Replace with your background image URL
 
 import "../index.css"; // Ensure your styles are imported
 import TestimonialSection from "../components/TestimonialSection";
@@ -26,11 +26,11 @@ const values = [
   { title: "Sustainability", desc: "Ensuring our solutions are environmentally responsible and sustainable.", gradient: "from-purple-400 to-purple-600" },
 ];
 
-const teamMembers = [
-  { name: "John Doe", role: "Engineer", image: "https://yourdomain.com/assets/team1.jpg" },
-  { name: "Jane Smith", role: "Project Manager", image: "https://yourdomain.com/assets/team2.jpg" },
-  { name: "Mike Johnson", role: "Lead Consultant", image: "https://yourdomain.com/assets/team3.jpg" },
-];
+// const teamMembers = [
+//   { name: "John Doe", role: "Engineer", image: "https://yourdomain.com/assets/team1.jpg" },
+//   { name: "Jane Smith", role: "Project Manager", image: "https://yourdomain.com/assets/team2.jpg" },
+//   { name: "Mike Johnson", role: "Lead Consultant", image: "https://yourdomain.com/assets/team3.jpg" },
+// ];
 
 const ceo = {
   name: "Sameer Singh",
@@ -176,7 +176,7 @@ const About = () => {
       </div>
 
       {/* Team Members */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
@@ -191,7 +191,7 @@ const About = () => {
             <p className="text-gray-600 text-sm">{member.role}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
 
 

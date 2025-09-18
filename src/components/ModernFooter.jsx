@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn,FaGoogle, FaTwitter } from "react-icons/fa";
 import logo from "../assets/envirologo.png"; // Replace with your logo path
 
 const ModernFooter = () => {
@@ -17,7 +17,15 @@ const ModernFooter = () => {
             <a href="https://www.facebook.com/people/Skilled-Enviro-Services/100068131592409/" className="hover:text-green-500 transition"><FaFacebookF /></a>
           
             <a href="https://www.linkedin.com/in/sameer-singh-729294a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " className="hover:text-green-500 transition"><FaLinkedinIn /></a>
-
+            {/* Google Icon */}
+                <a
+                  href="https://www.google.com/search?sca_esv=adca3bde667fa053&hl=en-GB&gl=in&output=search&kgmid=/g/11vjw5fkxy&q=Skilled+Enviro+Services,+Jaipur&shndl=30&shem=lsptbl1&source=sh/x/loc/act/m1/3&kgs=7cbf09793fe9e9f4&utm_source=lsptbl1,sh/x/loc/act/m1/3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-200"
+                >
+                  <FaGoogle  />
+                </a>
           </div>
         </div>
 

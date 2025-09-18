@@ -16,7 +16,7 @@ const Services = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="text-center z-10 px-6">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text drop-shadow-lg">
+          <h1 className="text-3xl md:text-5xl font-extrabold py-7 bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text drop-shadow-lg">
             Innovative Environmental & Engineering Solutions
           </h1>
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">

@@ -6,7 +6,7 @@ import 'swiper/css/autoplay';
 
 // Import local images
 import natureImg from '../assets/h1.jpg';
-import forestImg from '../assets/1212.jpg';
+import forestImg from '../assets/12245.jpg';
 import solarImg from '../assets/h3.jpg';
 
 // Slide data: each slide has an image, title, and description

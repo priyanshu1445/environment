@@ -130,7 +130,7 @@ const Header = () => {
                     : "hover:text-green-600"
                 }
               >
-                Service
+                Services
               </NavLink>
               <NavLink
                 to="/gallery"
