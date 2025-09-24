@@ -3,8 +3,9 @@ import { FaRocket, FaShieldAlt, FaSyncAlt, FaHeadset } from "react-icons/fa";
 import companyImage from "../assets/envirologo.png"; // Replace with your company image URL
 // import ourStoryBg from "../assets/9495446.png"; // Replace with your background image URL
 
-import bgImage from "../assets/9495446.png"; // Replace with your background image URL
+import bgImage from "../assets/1234567.jpg"; // Replace with your background image URL
 import CEO from "../assets/ceo.jpeg"; // Replace with your CEO image URL
+import mam from "../assets/mam.jpg"; // Replace with your team member image URL
 
 
 import aboutBg from "../assets/00008.jpg"; // Replace with your background image URL
@@ -26,17 +27,16 @@ const values = [
   { title: "Sustainability", desc: "Ensuring our solutions are environmentally responsible and sustainable.", gradient: "from-purple-400 to-purple-600" },
 ];
 
-// const teamMembers = [
-//   { name: "John Doe", role: "Engineer", image: "https://yourdomain.com/assets/team1.jpg" },
-//   { name: "Jane Smith", role: "Project Manager", image: "https://yourdomain.com/assets/team2.jpg" },
-//   { name: "Mike Johnson", role: "Lead Consultant", image: "https://yourdomain.com/assets/team3.jpg" },
-// ];
+const teamMembers = [
+  { name: "Dr. Anjali Chachane", role: "Cheif Techinal Officer", image: mam, description:"“Having more than 20 years of working experience, I believe that one of the roles of a CTO is to create a culture and environment that allows our employees to experience the “Fulfillment through Work”. We achieve this by aligning the growth of each individual employee with the growth of the business and developing a workforce that drives change. To build our future as an Environment & Engineering company, we continually strengthen our R&D governance and concentrate our investment in key areas, shifting to a market-in/open innovation type R&D process. Additionally, we aim to deepen our existing business and create new customer experience value, enhancing our technological competitiveness as an Environment & engineering services company.”" },
+
+];
 
 const ceo = {
   name: "Sameer Singh",
   role: "Chief Executive Officer",
   image: CEO,
-  description: "Our clients consistently praise our expertise, professionalism, and reliability. They value our deep knowledge of environmental laws, clear guidance, and ability to simplify complex regulatory processes. With a focus on timely delivery, transparency, and sustainable solutions, we’ve built a reputation as a trusted partner for end-to-end environmental consultancy services."
+  description: "Mr. Sameer Kumar Singh, CEO of Skilled Enviro Services, is a QCI–NABET accredited Environmental Impact Assessment (EIA) Coordinator with over a decade of experience in environmental consultancy. An engineer with an Advanced Diploma in Industrial Safety, he specializes in EIA, water pollution control, risk assessment, sand mining studies, techno-legal compliance, and government liaison. He has successfully led projects for government bodies, PSUs, private industries, and international agencies. With expertise in hazardous waste management, rapid environmental issue assessment, and process optimization, Mr. Singh is known for ensuring accuracy, compliance, and timely delivery. Under his leadership, Skilled Enviro Services has built a strong reputation for sustainable solutions, legal compliance, and environmental stewardship."
 };
 
 const About = () => {
@@ -157,41 +157,56 @@ const About = () => {
       className=" mx-auto px-6 py-20 bg-cover bg-center bg-no-repeat rounded-2xl"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-green-700 text-transparent bg-clip-text">
+      <h2 className="text-3xl md:text-7xl font-bold mb-12 text-center text-[#44444E]">
         Meet Our Team
       </h2>
 
       {/* CEO */}
-      <div className="flex flex-col md:flex-row items-center justify-center mb-16 gap-6">
+      <div className="flex flex-col md:flex-row items-center w-full justify-center mb-16 gap-6">
         <img
           src={ceo.image}
           alt={ceo.name}
           className="w-48 h-48 rounded-full object-cover shadow-xl"
         />
-        <div className="text-center md:text-left bg-white/70 p-4 rounded-xl shadow-md">
+        <div className="text-center md:text-left w-1/2 bg-white/70 p-4 rounded-xl shadow-md">
           <h3 className="text-2xl font-bold">{ceo.name}</h3>
           <p className="text-gray-600 text-lg mt-2">{ceo.role}</p>
-          <p className="text-gray-700 mt-4 max-w-md">{ceo.description}</p>
+          <p className="text-gray-700 mt-4 text-justify ">{ceo.description}</p>
         </div>
       </div>
 
-      {/* Team Members */}
-      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-        {teamMembers.map((member, idx) => (
-          <div
-            key={idx}
-            className="p-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 bg-white/80 backdrop-blur-sm"
-          >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-32 h-32 rounded-full mx-auto object-cover mb-4 shadow-lg"
-            />
-            <h3 className="text-xl font-semibold">{member.name}</h3>
-            <p className="text-gray-600 text-sm">{member.role}</p>
+
+
+   <div className="space-y-12">
+      {teamMembers.map((member, index) => (
+        <div
+          key={index}
+          className="flex flex-col md:flex-row items-center justify-center mb-16 gap-6"
+        >
+       
+          <div className="text-center md:text-left bg-white/70 p-4  max-w-1/2 rounded-xl shadow-md">
+            <h3 className="text-2xl font-bold">{member.name}</h3>
+            <p className="text-gray-600 text-lg mt-2">{member.role}</p>
+            <p className="text-gray-700 mt-4 text-justify ">
+              {member.description}
+            </p>
           </div>
-        ))}
-      </div> */}
+             <img
+            src={member.image}
+            alt={member.name}
+            className="w-48 h-48 rounded-full object-cover shadow-xl"
+          />
+        </div>
+      ))}
+    </div>
+
+      {/* mam  */}
+
+
+
+      
+
+  
     </section>
 
 

@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 
 // 📌 Import local images
+import muncipleImg from "../assets/munciple.jpg";
 import environmentImg from "../assets/2525252.png";
 import forestImg from "../assets/212121.jpg";
 import consentImg from "../assets/00000.jpg";
@@ -29,7 +30,7 @@ import socialImg from "../assets/00002.jpg";
 import cgwaImg from "../assets/00003.jpg";
 import complianceImg from "../assets/00004.jpg";
 import miningPlanImg from "../assets/12.jpg";
-import dgpsImg from "../assets/2.jpg";
+import dgpsImg from "../assets/drone1.jpg";
 import replenishImg from "../assets/00006.jpg";
 import riskImg from "../assets/00007.webp";
 import cement from "../assets/1.jpg"
@@ -62,15 +63,7 @@ export const allServices = [
     description:
       "These are some of the best services we provide to our clients.",
     features: [
-     "MINNING PROJECTS",
-      "IRRIGATION PROJECTS",
-      "MINERAL BENEFICIATION",
-      "METALLURGICAL INDUSTRIES",
-      "CEMENT PLANTS",
-      "SYNTHETIC ORGANIC INDUSTRIES",
-      "HIGHWAY PROJECTS",
-      "CONSTRUCTION PROJECTS",
-      "ASBESTOS PLANTS",
+    
     ],
   },
   {
@@ -234,6 +227,19 @@ export const allServices = [
       "Infrastructure planning",
       "End-to-end project execution",
       "Regulatory clearance support",
+    ],
+  },
+  {
+    category: "additional",
+    title: "Muncipal Solid Waste Management",
+    urlTitle: "muncipal-solid-waste-management",
+    slug: slugify("Muncipal Solid Waste Management"),
+    icon: <FaMountain size={28} />,
+    image: muncipleImg,
+    description:
+      "Comprehensive solutions for mining infrastructure and operations.",
+    features: [
+      
     ],
   },
   {

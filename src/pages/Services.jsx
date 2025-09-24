@@ -36,7 +36,7 @@ const Services = () => {
       <section className="bg-white py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl font-medium mb-16 text-center text-gray-800 tracking-wider">
-            Additional <span className="font-medium text-green-600">Services</span>
+            Environmental Clearance <span className="font-medium text-green-600">Services</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

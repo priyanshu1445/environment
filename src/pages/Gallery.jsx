@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { FaCamera, FaVideo } from "react-icons/fa";
-import galleryBg from "../assets/gallery.jpg"; // Local background image
+import galleryBg from "../assets/galleryhero1244.jpg"; // Local background image
 import g1 from "../assets/g1.jpg";
 import g2 from "../assets/g2.jpg";
 import g3 from "../assets/g3.jpg";
 import g4 from "../assets/g4.jpg";
 import g5 from "../assets/g5.jpg";
 import g6 from "../assets/g6.jpg";
+import g7 from "../assets/G7.jpg";
+import g8 from "../assets/g8.jpg";
 
 const galleryItems = [
   {
@@ -38,6 +40,16 @@ const galleryItems = [
     type: "image",
   
     src: g6, // natural habitat
+  },
+   {
+    type: "image",
+  
+    src: g7, // natural habitat
+  },
+   {
+    type: "image",
+  
+    src: g8, // natural habitat
   },
 ];
 
