@@ -23,7 +23,7 @@ const WhoWeAre = () => {
 
   const stats = [
     { number: 2020, label: "Founded" },
-    { number: 20, label: "Projects Delivered", suffix: "+" },
+    { number: 300, label: "Projects Delivered", suffix: "+" },
     { number: 10, label: "Expert Consultants", suffix: "+" },
     { number: 100, label: "Client Satisfaction", suffix: "%" },
   ];
